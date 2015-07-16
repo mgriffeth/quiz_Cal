@@ -25,18 +25,60 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+    <div id="viewContainer" class="col-md-12">
+        
     </div>
+    
+    <script type="text/template">
+        <div class="col-md-offset-3 col-md-6">
+            <h3>How many employees do you train per year?</h3>
+            <input type="number" name="name" value="">
+            <input type="button" name="name" value="">
+        </div>
+    </script>
+    
+    <script type="text/template">
+        <div class="col-md-offset-3 col-md-6">
+            <h3>How much do you spend on training anually?</h3>
+            <input type="number" name="name" value="">
+            <input type="button" name="name" value="">
+        </div>
+    </script>
+    
+    <script type="text/template">
+        <div class="col-md-offset-3 col-md-6">
+            <h3>How many hours a year does an employee train on average?</h3>
+            <input type="number" name="name" value="">
+            <input type="button" name="name" value="">
+        </div>
+    </script>
+    
+    <script type="text/template">
+        <div class="col-md-offset-3 col-md-6">
+            <h3>What is the average salary of an employee at yur company?</h3>
+            <input type="number" name="name" value="">
+            <input type="button" name="name" value="">
+        </div>
+    </script>
+    
+    <script type="text/template">
+        <div class="col-md-offset-3 col-md-6">
+            <h3>Select your industry:</h3>
+            <input type="number" name="name" value="">
+            <input type="button" name="name" value="">
+        </div>
+    </script>
+    
+    <script type="text/template">
+        <div class="col-md-offset-3 col-md-6">
+            <h3>What is your email address?</h3>
+            <input type="email" name="name" value="">
+            <input type="button" name="name" value="">
+        </div>
+    </script>
+
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -58,6 +100,10 @@
     
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/collections/calculation_collection.js"></script>
+        <script src="scripts/models/calculation_model.js"></script>
+        <script src="scripts/routes/app_router.js"></script>
+        <script src="scripts/views/home_view.js"></script>
         <!-- endbuild -->
 </body>
 </html>
