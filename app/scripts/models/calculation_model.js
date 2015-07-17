@@ -1,5 +1,5 @@
 (function(){
-	App.Models.CalculationModel = Pase.Object.extend({
+	App.Models.CalculationModel = Parse.Object.extend({
 		className:'Calculation',
 		
 		idAttribute:'objectId',
