@@ -1,7 +1,8 @@
 (function(){
 	App.Views.FormTrainingTimeView = Parse.View.extend({
 		events:{
-			'click #nextToAvgSalary' : 'next'
+			'click #nextToAvgSalary' : 'next',
+			'click #backToTrainingCost' : 'back'
 		},
 		
 		template: $('#formTrainingTime').html(),
@@ -14,7 +15,10 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			App.router.navigate('formAvgSalary', { trigger : true });
+			App.router.navigate('formPage04', { trigger : true });
+		},
+		back: function(){
+			App.router.navigate('formPage02', { trigger : true });
 		}
 	});
 }());

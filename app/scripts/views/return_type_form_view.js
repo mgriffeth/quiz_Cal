@@ -1,11 +1,11 @@
 (function(){
-	App.Views.FormAvgSalaryView = Parse.View.extend({
+	App.Views.FormReturnTypeView = Parse.View.extend({
 		events:{
 			'click #nextToIndustry' : 'next',
 			'click #backToTrainingTime' : 'back'
 		},
 		
-		template: $('#formAverageSalary').html(),
+		template: $('#formReturnType').html(),
 		
 		initialize:function(){
 			this.render();

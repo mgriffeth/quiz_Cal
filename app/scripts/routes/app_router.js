@@ -8,7 +8,7 @@
 			'formPage01' : 'formNumberEmployees',
 			'formPage02' : 'formTrainingCost',
 			'formPage03' : 'formTrainingTime',
-			'formPage04' : 'formAvgSalary',
+			'formPage04' : 'formReturnType',
 			'formPage05' : 'formIndustry',
 			'formPage06' : 'formEmail',
 			'formResults' : 'formResults'
@@ -28,6 +28,9 @@
 		},
 		formAvgSalary: function(){
 			new App.Views.FormAvgSalaryView();
+		},
+		formReturnType: function(){
+		 new App.Views.FormReturnTypeView();	
 		},
 		formIndustry: function(){
 			new App.Views.FormIndustryView();

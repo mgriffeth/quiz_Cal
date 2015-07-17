@@ -1,10 +1,10 @@
 (function(){
 	App.Views.FormResultsView = Parse.View.extend({
 		events:{
-			// 'click #nextToTrainingCost' : 'next'
+			'click #resultsToHome' : 'goHome'
 		},
 		
-		template: $('#formNumberEmployees').html(),
+		template: $('#formResults').html(),
 		
 		initialize:function(){
 			this.render();
@@ -12,6 +12,9 @@
 		},
 		render: function(){
 			this.$el.html(this.template);
+		},
+		goHome: function(){
+			App.router.navigate('', { trigger : true });
 		}
 	});
 }());

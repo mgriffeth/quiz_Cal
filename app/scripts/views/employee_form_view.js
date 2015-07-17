@@ -14,7 +14,10 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			App.router.navigate('formTrainingCost', { trigger : true });
+			App.router.navigate('formPage02', { trigger : true });
 		}
+		// back: function(){
+		// 	App.router.navigate('formPage01', { trigger : true });
+		// }
 	});
 }());

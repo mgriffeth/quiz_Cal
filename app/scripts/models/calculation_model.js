@@ -5,17 +5,15 @@
 		idAttribute:'objectId',
 		
 		defaults:{
-			averageSalary:'',
 			contacted:false,
-			employeeCount:'',
-			employeeTrainingHours:'',
-			employeeTrainingCost:'',
+			employees:'',
+			TrainingHours:'',
+			TrainingCost:'',
 			email:'',
 			industry:'',
-			returnOnInvestment:'',
-			savingsAnually:'',
-			savingsPerPerEmployee:'',
-			valueEdify:''
+			returnOnInvestment1:'',
+			returnOnInvestment2:'',
+			anualSavings:''
 		},
 		
 		initialize: function (){

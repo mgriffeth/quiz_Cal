@@ -1,9 +1,9 @@
 
 // Custom Styles
 body {
-  background: #fafafa;
+  background: #000000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  background-color: #ffffff; 
 }
 
 .hero-unit {
@@ -20,4 +20,22 @@ body {
     line-height: 1;
     letter-spacing: -1px;
   }
+}
+.form-box{
+    text-align: center;
+    // border-style: solid;
+    // border-radius: 10px;
+    border-width: 1px;
+    padding: 2rem;
+    background-color: #595A60;
+    color:#ffffff
+}
+.form-field{
+    margin: 1rem;
+    color:black;
+}
+
+.center{
+    text-align: center;
+    margin:0 auto;
 }
