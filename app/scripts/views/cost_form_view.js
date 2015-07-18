@@ -15,7 +15,11 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			App.router.navigate('formPage03', { trigger : true });
+			if($('#trainingCost').val().length > 0){
+				trainingCost = $('#trainingCost').val();
+				console.log(trainingCost);
+				App.router.navigate('formPage03', { trigger : true });
+			}
 		},
 		back: function(){
 			App.router.navigate('formPage01', { trigger : true });

@@ -7,10 +7,11 @@
 		defaults:{
 			contacted:false,
 			employees:'',
-			TrainingHours:'',
 			TrainingCost:'',
+			TrainingHours:'',
 			email:'',
 			industry:'',
+			returnType: '',
 			returnOnInvestment1:'',
 			returnOnInvestment2:'',
 			anualSavings:''

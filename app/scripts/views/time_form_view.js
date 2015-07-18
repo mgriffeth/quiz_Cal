@@ -15,7 +15,11 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			App.router.navigate('formPage04', { trigger : true });
+			if($('#trainingTime').val().length > 0){
+				trainingHours = $('#trainingTime').val();
+				App.router.navigate('formPage04', { trigger : true });
+			}
+			
 		},
 		back: function(){
 			App.router.navigate('formPage02', { trigger : true });

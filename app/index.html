@@ -62,11 +62,15 @@
                 <span class="sr-only">0% Complete</span>
               </div>
             </div>
-            <h3>How many employees do you train per year?</h3>
-            <br>
-            <input id="numberEmployees" class="form-field" type="number" name="name" value="">
-            <br>
-            <input id="nextToTrainingCost" class="btn btn-success btn-block" type="button" name="name" value="next">
+            <div class="question-box col-md-12">
+                <h3>How many employees do you train per year?</h3>
+            </div>
+            <div class="input-box col-md-12">
+                    <input id="numberEmployees" class="form-field" type="number" name="name" value="">
+            </div>
+            <div class="btn-group col-md-12">
+                <input id="nextToTrainingCost" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="next">
+            </div>
         </div>
     </script>
     
@@ -77,15 +81,17 @@
                 <span class="sr-only">20% Complete</span>
               </div>
             </div>
-            <h3>How much do you spend on training anually?</h3>
+            <div class="question-box col-md-12">
+                <h3>How much do you spend on training anually?</h3>
+            </div>
             <input id="trainingCost" class="form-field" type="number" name="name" value="">
-            <div class="">
+            <div class="input-box col-md-12">
                 <label for="">Total: <input type="radio" name="trainHours" value="total"></label>
                 <label for="">Per Employee: <input type="radio" name="trainHours" value="employee"></label>
             </div>
             <div class="btn-group col-md-12">    
-                <input id="backToNumberEmployees" class="btn btn-success col-md-6" type="button" name="name" value="Back">
-                <input id="nextToTrainingTime" class="btn btn-success col-md-6" type="button" name="name" value="Next">
+                <input id="backToNumberEmployees" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToTrainingTime" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
             
         </div>
@@ -98,11 +104,15 @@
                 <span class="sr-only">40% Complete</span>
               </div>
             </div>
-            <h3>How many hours a year does an employee train on average?</h3>
-            <input id="trainingTime" class="form-field" type="number" name="name" value="">
+            <div class="question-box col-md-12">
+                <h3>How many hours a year does an employee train on average?</h3>    
+            </div>
+            <div class="input-box col-md-12">
+                <input id="trainingTime" class="form-field" type="number" name="name" value="">
+            </div>
             <div class="btn-group col-md-12">
-                <input id="backToTrainingCost" class="btn btn-success col-md-6" type="button" name="name" value="Back">
-                <input id="nextToAvgSalary" class="btn btn-success col-md-6" type="button" name="name" value="Next">
+                <input id="backToTrainingCost" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToAvgSalary" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
             
         </div>
@@ -131,21 +141,23 @@
                 <span class="sr-only">60% Complete</span>
               </div>
             </div>
-            <h3>You are looking to...</h3>
-            <div class="">
-                <label for="">Extend Current training:
-                    <input type="radio" name="roiType" value="extend">
+            <div class="question-box col-md-12">
+                <h3>You are looking to...</h3>    
+            </div>
+            <div id="returnTypeGroup" class="inbut-box col-md-12 ">
+                <label class="col-md-12" for="">Extend Current training:
+                    <input type="radio" name="returnType" id="radioExtend" checked>
                 </label>
-                <label for="">Add to current training:
-                    <input type="radio" name="roiType" value="add">
+                <label class="col-md-12" for="">Add to current training:
+                    <input type="radio" name="returnType" id="radioAdd">
                 </label>
-                <label for="">Both:
-                    <input type="radio" name="roiType" value="both">
+                <label class="col-md-12" for="">Both:
+                    <input type="radio" name="returnType" id="radioBoth">
                 </label>    
             </div>
             <div class="btn-group col-md-12">
-                <input id="backToTrainingTime" class="btn btn-success col-md-6" type="button" name="name" value="Back">
-                <input id="nextToIndustry" class="btn btn-success col-md-6" type="button" name="name" value="Next">
+                <input id="backToTrainingTime" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
             
         </div>
@@ -158,24 +170,33 @@
                 <span class="sr-only">80% Complete</span>
               </div>
             </div>
-            <h3>Select your industry:</h3>
-            <div class="form-group dropdown col-md-6 form-field">
-                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span id="selectedIndustry">Industry</span>
-                        <span class="caret"></span>
-                     </button>
-                    <ul id='industryDrop' class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a>Hospitality</a></li>
-                      <li><a>Manufacturing</a></li>
-                      <li><a>Healthcare</a></li>
-                      <li><a>Transportation</a></li>
-                      <li><a>Mining</a></li>
-                      <li><a>Other</a></li>
-                    </ul>
+            <div class="question-box col-md-12">
+                <h3>Select your industry:</h3>    
+            </div>
+            <div class="input-box col-md-12">
+                <div class="form-group dropdown col-md-6">
+                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span id="selectedIndustry">Industry</span>
+                            <span class="caret"></span>
+                         </button>
+                        <ul id='industryDrop' class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <li><a>Hospitality</a></li>
+                          <li><a>Manufacturing</a></li>
+                          <li><a>Healthcare</a></li>
+                          <li><a>Transportation</a></li>
+                          <li><a>Mining</a></li>
+                          <li><a>Other</a></li>
+                        </ul>
+                    </div>
+                    <div id="industryOtherDiv" class="form-group col-md-12">
+                    <label class="" for="numEmp">Industry Name:</label>
+                    <br>
+                    <input class="col-md-12" id="otherIndustry" type="text" name="name" placeholder="Your industry" min="0" value="">
                 </div>
+            </div>
             <div class="btn-group col-md-12">
-                <input id="backToAvgSalary" class="btn btn-success col-md-6" type="button" name="name" value="Back">
-                <input id="nextToEmail" class="btn btn-success col-md-6" type="button" name="name" value="Next">
+                <input id="backToReturnType" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToEmail" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
             
         </div>
@@ -188,9 +209,16 @@
                 <span class="sr-only">100% Complete</span>
               </div>
             </div>
-            <h3>What is your email address?</h3>
-            <input id="email" class="form-field" type="email" name="name" value="">
-            <input id="nextToResults" class="btn btn-success btn-block" type="button" name="name" value="Results">
+            <div class="question-box col-md-12">
+                <h3>What is your email address?</h3>    
+            </div>
+            <div class="input-box col-md-12">
+                <input id="email" class="form-field" type="email" name="name" value="" placeholder="example@gmail.com">
+            </div>
+            <div class="btn-group col-md-12">
+                <input id="backToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToResults" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Results">    
+            </div>
         </div>
     </script>
     

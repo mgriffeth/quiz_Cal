@@ -2,7 +2,7 @@
 	App.Views.FormIndustryView = Parse.View.extend({
 		events:{
 			'click #nextToEmail' : 'next',
-			'click #backToRoiType' : 'back'
+			'click #backToReturnType' : 'back'
 		},
 		
 		template: $('#formIndustry').html(),

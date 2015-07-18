@@ -14,10 +14,11 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			App.router.navigate('formPage02', { trigger : true });
+			if($('#numberEmployees').val().length > 0){
+				employees = $('#numberEmployees').val();
+				console.log(employees);
+				App.router.navigate('formPage02', { trigger : true });	
+			}
 		}
-		// back: function(){
-		// 	App.router.navigate('formPage01', { trigger : true });
-		// }
 	});
 }());

@@ -15,6 +15,14 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
+			if ($('#radioExtend').is(':checked')){
+				returnType = 'extend';
+			} else if ($('#radioAdd').is(':checked')){
+				returnType = 'add';
+			} else {
+				returnType = 'both';
+			};
+			console.log(returnType);
 			App.router.navigate('formPage05', { trigger : true });
 		},
 		back: function(){
