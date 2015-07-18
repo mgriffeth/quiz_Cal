@@ -16,7 +16,8 @@
 		},
 		next: function(){
 			if($('#trainingTime').val().length > 0){
-				trainingHours = $('#trainingTime').val();
+				trainingHoursPerEmployee = Number($('#trainingTime').val());
+				trainingHours = trainingHoursPerEmployee * employees;
 				App.router.navigate('formPage04', { trigger : true });
 			}
 			

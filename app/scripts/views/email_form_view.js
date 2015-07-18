@@ -22,16 +22,25 @@
 				
 				var calculationInformation = new App.Models.CalculationModel({
 					employees:employees,
-					TrainingCost: trainingCost,
-					TrainingHours: trainingHours,
+					trainingCost: trainingCost,
+					trainingCostPerEmployee: trainingCostPerEmployee,
+					trainingHours: trainingHours,
+					trainingHoursPerEmployee: trainingHoursPerEmployee,
 					returnType: returnType,
 					industry:industry,
 					email:email
 				});
+				calculationInformation.save(null,{
+					success:function(){
+						App.calculation_collection.add(calculationInformation)
+						console.log(calculationInformation);
+						App.router.navigate('formResults', { trigger : true });
+					}
+				})
+				// calculationInformation.set('training')
 				
-				App.calculation_collection.add(calculationInformation).save();
-				console.log(calculationInformation);
-				App.router.navigate('formResults', { trigger : true });
+				
+				
 			}
 		},
 		back: function(){

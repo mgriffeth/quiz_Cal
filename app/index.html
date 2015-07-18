@@ -47,7 +47,7 @@
         <div class="jumbotron col-md-6 col-md-offset-3">
             <h1>See What Edify can do for you!</h1>
             <p>
-                By filling out a short survey, we can show you how you can benefit from using edify to reinforce the knowledge your business requires.
+                By filling out a short survey, we can show you how you can benefit from using edify to reinforce the knowledge that your business needs to thrive.
             </p>
             <p>
                 <a class="btn btn-success btn-lg" id="startButton" role="button" name="name" value="">start survey</a>
@@ -86,8 +86,8 @@
             </div>
             <input id="trainingCost" class="form-field" type="number" name="name" value="">
             <div class="input-box col-md-12">
-                <label for="">Total: <input type="radio" name="trainHours" value="total"></label>
-                <label for="">Per Employee: <input type="radio" name="trainHours" value="employee"></label>
+                <label for="">Total: <input id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
+                <label for="">Per Employee: <input id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
             </div>
             <div class="btn-group col-md-12">    
                 <input id="backToNumberEmployees" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
@@ -180,15 +180,15 @@
                             <span class="caret"></span>
                          </button>
                         <ul id='industryDrop' class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a>Hospitality</a></li>
-                          <li><a>Manufacturing</a></li>
-                          <li><a>Healthcare</a></li>
-                          <li><a>Transportation</a></li>
-                          <li><a>Mining</a></li>
-                          <li><a>Other</a></li>
+                          <li class="indDrop"><a>Hospitality</a></li>
+                          <li class="indDrop"><a>Manufacturing</a></li>
+                          <li class="indDrop"><a>Healthcare</a></li>
+                          <li class="indDrop"><a>Transportation</a></li>
+                          <li class="indDrop"><a>Mining</a></li>
+                          <li class="indDrop" id="industryOther"><a>Other</a></li>
                         </ul>
                     </div>
-                    <div id="industryOtherDiv" class="form-group col-md-12">
+                <div id="industryOtherDiv" class="form-group col-md-12 hidden">
                     <label class="" for="numEmp">Industry Name:</label>
                     <br>
                     <input class="col-md-12" id="otherIndustry" type="text" name="name" placeholder="Your industry" min="0" value="">

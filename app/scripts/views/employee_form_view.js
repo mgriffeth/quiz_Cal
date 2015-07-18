@@ -15,7 +15,7 @@
 		},
 		next: function(){
 			if($('#numberEmployees').val().length > 0){
-				employees = $('#numberEmployees').val();
+				employees = Number($('#numberEmployees').val());
 				console.log(employees);
 				App.router.navigate('formPage02', { trigger : true });	
 			}

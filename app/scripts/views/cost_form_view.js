@@ -16,8 +16,17 @@
 		},
 		next: function(){
 			if($('#trainingCost').val().length > 0){
-				trainingCost = $('#trainingCost').val();
-				console.log(trainingCost);
+				if($('#radioTimeTotal').is(':checked')) {
+					trainingCost = Number($('#trainingCost').val());
+					trainingCostPerEmployee = trainingCost / employees;
+					console.log(trainingCost);
+					console.log(trainingCostPerEmployee);
+				} else if ($('#radioTimePerEmployee').is(':checked')) {
+					trainingCostPerEmployee = Number($('#trainingCost').val());
+					trainingCost =  trainingCostPerEmployee * employees;
+					console.log(trainingCost);
+					console.log(trainingCostPerEmployee);
+				}
 				App.router.navigate('formPage03', { trigger : true });
 			}
 		},

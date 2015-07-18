@@ -3,6 +3,7 @@
 		events:{
 			'click #nextToEmail' : 'next',
 			'click #backToReturnType' : 'back'
+			
 		},
 		
 		template: $('#formIndustry').html(),
@@ -19,6 +20,8 @@
 		},
 		back: function(){
 			App.router.navigate('formPage04', { trigger : true });
+		},
+		handleDropDown: function(){
 		}
 	});
 }());

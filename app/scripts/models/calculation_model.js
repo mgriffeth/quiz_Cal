@@ -7,8 +7,10 @@
 		defaults:{
 			contacted:false,
 			employees:'',
-			TrainingCost:'',
-			TrainingHours:'',
+			trainingCost:'',
+			trainingCostPerEmployee:'',
+			trainingHours:'',
+			trainingHoursPerEmployee:'',
 			email:'',
 			industry:'',
 			returnType: '',
