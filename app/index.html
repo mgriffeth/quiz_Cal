@@ -75,7 +75,7 @@
                 <h3>How many employees do you train per year?</h3>
             </div>
             <div class="input-box col-md-12">
-                    <input id="numberEmployees" class="form-field" type="number" name="name" value="">
+                    <input id="numberEmployees" class="form-field input-lg" type="number" name="name" value="">
             </div>
             <div class="btn-group col-md-12">
                 <input id="nextToTrainingCost" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="next">
@@ -231,178 +231,74 @@
         </div>
     </script>
     
-    <script type="text/template" id="formResultsAddition">
-        <div class="box-main jumbotron col-md-offset-3 col-md-6">
-            <h3>Results</h3>
-            <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
-                     <tr>
-                       <th></th>
-                       <th><h4>Edify Stats</h4></th>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Total Cost:</h4></th>
-                        <td><h4 id="table-edifyTotalCost"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Cost per Employee:</h4></th>
-                        <td><h4 id="table-edifyCostPerEmp"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Hourly Cost per Employee:</h4></th>
-                        <td><h4 id="table-costHourlyEdify"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Quizes:</h4></th>
-                        <td><h4 id="table-games"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Questions Delivered:</h4></th>
-                        <td><h4 id="table-questions"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Edify Value:</h4></th>
-                        <td><h4 id="table-edifyValue"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Savings From Edify:</h4></th>
-                        <td><h4 id="table-edifySavings"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>ROI:</h4></th>
-                        <td><h4 id="table-edifyReturn"><h4></td>
-                     </tr>
-                 </table>
+    <script type="text/template" id="formResultsExtension">
+        <div class=" col-md-offset-3 col-md-6">
+            <ul class="list-group">
+                
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">1.Total Cost</h4>
+                    <div class="center">
+                        <h2 id="total-cost" class=" result-text list-group-item-text">$23.00</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">2.Cost per Employee</h4>
+                    <div class="center">
+                        <h2 id="cost-hour"class=" result-text list-group-item-text">$23.00</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">3.Saving</h4>
+                    <div class="center">
+                        <h2 id="savings" class=" result-text list-group-item-text">$2300.00</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">4.Edify Cost per Hour</h4>
+                    <div class="center">
+                        <h2 id="edify-cost-hour"class=" result-text list-group-item-text">$2.00</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">5.ROI</h4>
+                    <div class="center">
+                        <h2 id="return" class=" result-text list-group-item-text">100.00%</h2>
+                    </div>
+                  </a>
+                </div>
+            </ul>
                  <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
         </div>
     </script>
-    <script type="text/template" id="formResultsExtension">
+    
+    <script type="text/template" id="formResultsAddition">
         <div class="box-main jumbotron col-md-offset-3 col-md-6">
-            <h3>Results</h3>
-            <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
-                     <tr>
-                       <th></th>
-                       <th><h4>Extend</h4></th>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Total Cost:</h4></th>
-                        <td><h4 id="table-edifyTotalCost"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Cost per Employee:</h4></th>
-                        <td><h4 id="table-edifyCostPerEmp"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Hourly Cost per Employee:</h4></th>
-                        <td><h4 id="table-costHourlyEdify"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Quizes:</h4></th>
-                        <td><h4 id="table-games"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Questions Delivered:</h4></th>
-                        <td><h4 id="table-questions"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Edify Value:</h4></th>
-                        <td><h4 id="table-edifyValue"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>Savings From Edify:</h4></th>
-                        <td><h4 id="table-edifySavings"><h4></td>
-                     </tr>
-                     <tr class="resultRow">
-                        <th ><h4>ROI:</h4></th>
-                        <td><h4 id="table-edifyReturn"><h4></td>
-                     </tr>
-                 </table>
+            <h3>Results for Addition</h3>
+            <input type="range" name="name" value="">
                  <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
         </div>
-        <script type="text/template" id="formResultsAddition">
-            <div class="box-main jumbotron col-md-offset-3 col-md-6">
-                <h3>Results</h3>
-                <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
-                         <tr>
-                           <th></th>
-                           <th><h4>Add</h4></th>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Total Cost:</h4></th>
-                            <td><h4 id="table-edifyTotalCost"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Cost per Employee:</h4></th>
-                            <td><h4 id="table-edifyCostPerEmp"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Hourly Cost per Employee:</h4></th>
-                            <td><h4 id="table-costHourlyEdify"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Quizes:</h4></th>
-                            <td><h4 id="table-games"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Questions Delivered:</h4></th>
-                            <td><h4 id="table-questions"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Edify Value:</h4></th>
-                            <td><h4 id="table-edifyValue"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Savings From Edify:</h4></th>
-                            <td><h4 id="table-edifySavings"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>ROI:</h4></th>
-                            <td><h4 id="table-edifyReturn"><h4></td>
-                         </tr>
-                     </table>
-                     <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
-            </div>
-        </script>
+    </script>
+    
+        
         <script type="text/template" id="formResultsBoth">
             <div class="box-main jumbotron col-md-offset-3 col-md-6">
-                <h3>Results</h3>
-                <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
-                         <tr>
-                           <th></th>
-                           <th><h4>Both</h4></th>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Total Cost:</h4></th>
-                            <td><h4 id="table-edifyTotalCost"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Cost per Employee:</h4></th>
-                            <td><h4 id="table-edifyCostPerEmp"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Hourly Cost per Employee:</h4></th>
-                            <td><h4 id="table-costHourlyEdify"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Quizes:</h4></th>
-                            <td><h4 id="table-games"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Questions Delivered:</h4></th>
-                            <td><h4 id="table-questions"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Edify Value:</h4></th>
-                            <td><h4 id="table-edifyValue"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>Savings From Edify:</h4></th>
-                            <td><h4 id="table-edifySavings"><h4></td>
-                         </tr>
-                         <tr class="resultRow">
-                            <th ><h4>ROI:</h4></th>
-                            <td><h4 id="table-edifyReturn"><h4></td>
-                         </tr>
-                     </table>
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">ROI:</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                
                      <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
             </div>
         </script>
@@ -412,9 +308,10 @@
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/bootstrap/js/transition.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
-    <script src="../bower_components/fakeloader/fakeLoader.js"></script>
+    
     <!-- endbower -->
     <!-- endbuild -->
     <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
@@ -432,10 +329,11 @@
         
         <script src="scripts/collections/calculation_collection.js"></script>
         
+        <script src="scripts/routes/app_router.js"></script>
+        
         <script src="scripts/views/home_view.js"></script>
         <script src="scripts/views/employee_form_view.js"></script>
         <script src="scripts/views/cost_form_view.js"></script>
-        <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/views/salary_form_view.js"></script>
         <script src="scripts/views/return_type_form_view.js"></script>
         <script src="scripts/views/industry_form_view.js"></script>

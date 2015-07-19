@@ -30,6 +30,9 @@ body {
     background-color: #595A60;
     color:#ffffff
 }
+.navbar-default{
+    background-color:#595A60;
+}
 .navbar-brand{
     padding: 0;
     padding-top:7px;
@@ -53,9 +56,22 @@ body {
 .input-box{
     text-align: center;
     min-height: 70px;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .box-main{
     background-color:#595A60;
     color: #ffffff;
+}
+.result-box{
+    background-color: #5CB85C;
+    border-style:none;
+}
+.result-text{
+    font-weight: 900;
+}
+.result-pane{
+    a{
+        background-color: #5CB85C;
+        color:#ffffff;
+    }
 }
