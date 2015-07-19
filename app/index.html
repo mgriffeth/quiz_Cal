@@ -23,6 +23,15 @@
     <!-- endbuild -->
   </head>
   <body>
+      <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img id="brandImg" alt="Brand" src="images/edify_emblem.png">
+          </a>
+        </div>
+      </div>
+    </nav>
       <div class="container">
           <div id="viewContainer" class="col-md-12">
             
@@ -44,7 +53,7 @@
       </div> -->
       
     <script type="text/template" id="homeView">
-        <div class="jumbotron col-md-6 col-md-offset-3">
+        <div class="box-main jumbotron col-md-6 col-md-offset-3">
             <h1>See What Edify can do for you!</h1>
             <p>
                 By filling out a short survey, we can show you how you can benefit from using edify to reinforce the knowledge that your business needs to thrive.
@@ -56,9 +65,9 @@
     </script>
     
     <script type="text/template" id="formNumberEmployees">
-        <div class=" jumbotron col-md-offset-3 col-md-6">
+        <div class="box-main  jumbotron col-md-offset-3 col-md-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                 <span class="sr-only">0% Complete</span>
               </div>
             </div>
@@ -75,17 +84,19 @@
     </script>
     
     <script type="text/template" id="formTrainingCost">
-        <div class="jumbotron col-md-offset-3 col-md-6">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                 <span class="sr-only">20% Complete</span>
               </div>
             </div>
             <div class="question-box col-md-12">
                 <h3>How much do you spend on training anually?</h3>
             </div>
-            <input id="trainingCost" class="form-field" type="number" name="name" value="">
+            
             <div class="input-box col-md-12">
+                <input id="trainingCost" class="form-field input-lg" type="number" name="name" value="">
+                <br>
                 <label for="">Total: <input id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
                 <label for="">Per Employee: <input id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
             </div>
@@ -98,9 +109,9 @@
     </script>
     
     <script type="text/template" id="formTrainingTime">
-        <div class="jumbotron col-md-offset-3 col-md-6">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                 <span class="sr-only">40% Complete</span>
               </div>
             </div>
@@ -108,7 +119,7 @@
                 <h3>How many hours a year does an employee train on average?</h3>    
             </div>
             <div class="input-box col-md-12">
-                <input id="trainingTime" class="form-field" type="number" name="name" value="">
+                <input id="trainingTime" class="form-field input-lg" type="number" name="name" value="">
             </div>
             <div class="btn-group col-md-12">
                 <input id="backToTrainingCost" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
@@ -135,16 +146,21 @@
         </div>
     </script> -->
     <script type="text/template" id="formReturnType">
-        <div class="jumbotron col-md-offset-3 col-md-6">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                 <span class="sr-only">60% Complete</span>
               </div>
             </div>
             <div class="question-box col-md-12">
                 <h3>You are looking to...</h3>    
             </div>
-            <div id="returnTypeGroup" class="inbut-box col-md-12 ">
+            <div class="input-box btn-group-vertical col-md-12">
+                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Extend Current Training">
+                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Add to Current Training">
+                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Both">
+            </div>
+            <!-- <div id="returnTypeGroup" class="inbut-box col-md-12 ">
                 <label class="col-md-12" for="">Extend Current training:
                     <input type="radio" name="returnType" id="radioExtend" checked>
                 </label>
@@ -154,7 +170,7 @@
                 <label class="col-md-12" for="">Both:
                     <input type="radio" name="returnType" id="radioBoth">
                 </label>    
-            </div>
+            </div> -->
             <div class="btn-group col-md-12">
                 <input id="backToTrainingTime" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
                 <input id="nextToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
@@ -164,9 +180,9 @@
     </script>
     
     <script type="text/template" id="formIndustry">
-        <div class="jumbotron col-md-offset-3 col-md-6">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                 <span class="sr-only">80% Complete</span>
               </div>
             </div>
@@ -174,24 +190,17 @@
                 <h3>Select your industry:</h3>    
             </div>
             <div class="input-box col-md-12">
-                <div class="form-group dropdown col-md-6">
-                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <span id="selectedIndustry">Industry</span>
-                            <span class="caret"></span>
-                         </button>
-                        <ul id='industryDrop' class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li class="indDrop"><a>Hospitality</a></li>
-                          <li class="indDrop"><a>Manufacturing</a></li>
-                          <li class="indDrop"><a>Healthcare</a></li>
-                          <li class="indDrop"><a>Transportation</a></li>
-                          <li class="indDrop"><a>Mining</a></li>
-                          <li class="indDrop" id="industryOther"><a>Other</a></li>
-                        </ul>
-                    </div>
+                <div class="btn-group-vertical col-md-12">
+                    <input id="industryHospitatlity" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Hospitality">
+                    <input id="industryManufacturing" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Manufacturing">
+                    <input id="industryHealthcare" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Healthcare">
+                    <input id="industryTransportation" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Transportation">
+                    <input id="industryMining" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Mining">
+                    <input id="industryOther" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Other">
+                </div>
                 <div id="industryOtherDiv" class="form-group col-md-12 hidden">
                     <label class="" for="numEmp">Industry Name:</label>
-                    <br>
-                    <input class="col-md-12" id="otherIndustry" type="text" name="name" placeholder="Your industry" min="0" value="">
+                    <input class="col-md-12 input-lg" id="otherIndustry" type="text" name="name" placeholder="Your industry" min="0" value="">
                 </div>
             </div>
             <div class="btn-group col-md-12">
@@ -203,9 +212,9 @@
     </script>
     
     <script type="text/template" id="formEmail">
-        <div class="jumbotron col-md-offset-3 col-md-6">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                 <span class="sr-only">100% Complete</span>
               </div>
             </div>
@@ -213,7 +222,7 @@
                 <h3>What is your email address?</h3>    
             </div>
             <div class="input-box col-md-12">
-                <input id="email" class="form-field" type="email" name="name" value="" placeholder="example@gmail.com">
+                <input id="email" class="form-field  input-lg" type="email" name="name" value="" placeholder="example@gmail.com">
             </div>
             <div class="btn-group col-md-12">
                 <input id="backToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
@@ -222,8 +231,8 @@
         </div>
     </script>
     
-    <script type="text/template" id="formResults">
-        <div class="jumbotron col-md-offset-3 col-md-6">
+    <script type="text/template" id="formResultsAddition">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
             <h3>Results</h3>
             <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
                      <tr>
@@ -266,6 +275,138 @@
                  <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
         </div>
     </script>
+    <script type="text/template" id="formResultsExtension">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
+            <h3>Results</h3>
+            <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
+                     <tr>
+                       <th></th>
+                       <th><h4>Extend</h4></th>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Total Cost:</h4></th>
+                        <td><h4 id="table-edifyTotalCost"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Cost per Employee:</h4></th>
+                        <td><h4 id="table-edifyCostPerEmp"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Hourly Cost per Employee:</h4></th>
+                        <td><h4 id="table-costHourlyEdify"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Quizes:</h4></th>
+                        <td><h4 id="table-games"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Questions Delivered:</h4></th>
+                        <td><h4 id="table-questions"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Edify Value:</h4></th>
+                        <td><h4 id="table-edifyValue"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>Savings From Edify:</h4></th>
+                        <td><h4 id="table-edifySavings"><h4></td>
+                     </tr>
+                     <tr class="resultRow">
+                        <th ><h4>ROI:</h4></th>
+                        <td><h4 id="table-edifyReturn"><h4></td>
+                     </tr>
+                 </table>
+                 <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
+        </div>
+        <script type="text/template" id="formResultsAddition">
+            <div class="box-main jumbotron col-md-offset-3 col-md-6">
+                <h3>Results</h3>
+                <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
+                         <tr>
+                           <th></th>
+                           <th><h4>Add</h4></th>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Total Cost:</h4></th>
+                            <td><h4 id="table-edifyTotalCost"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Cost per Employee:</h4></th>
+                            <td><h4 id="table-edifyCostPerEmp"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Hourly Cost per Employee:</h4></th>
+                            <td><h4 id="table-costHourlyEdify"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Quizes:</h4></th>
+                            <td><h4 id="table-games"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Questions Delivered:</h4></th>
+                            <td><h4 id="table-questions"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Edify Value:</h4></th>
+                            <td><h4 id="table-edifyValue"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Savings From Edify:</h4></th>
+                            <td><h4 id="table-edifySavings"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>ROI:</h4></th>
+                            <td><h4 id="table-edifyReturn"><h4></td>
+                         </tr>
+                     </table>
+                     <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
+            </div>
+        </script>
+        <script type="text/template" id="formResultsBoth">
+            <div class="box-main jumbotron col-md-offset-3 col-md-6">
+                <h3>Results</h3>
+                <table class="table-bordered form-group col-md-offset-2 col-md-8 ">
+                         <tr>
+                           <th></th>
+                           <th><h4>Both</h4></th>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Total Cost:</h4></th>
+                            <td><h4 id="table-edifyTotalCost"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Cost per Employee:</h4></th>
+                            <td><h4 id="table-edifyCostPerEmp"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Hourly Cost per Employee:</h4></th>
+                            <td><h4 id="table-costHourlyEdify"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Quizes:</h4></th>
+                            <td><h4 id="table-games"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Questions Delivered:</h4></th>
+                            <td><h4 id="table-questions"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Edify Value:</h4></th>
+                            <td><h4 id="table-edifyValue"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>Savings From Edify:</h4></th>
+                            <td><h4 id="table-edifySavings"><h4></td>
+                         </tr>
+                         <tr class="resultRow">
+                            <th ><h4>ROI:</h4></th>
+                            <td><h4 id="table-edifyReturn"><h4></td>
+                         </tr>
+                     </table>
+                     <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
+            </div>
+        </script>
+    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -299,7 +440,9 @@
         <script src="scripts/views/return_type_form_view.js"></script>
         <script src="scripts/views/industry_form_view.js"></script>
         <script src="scripts/views/email_form_view.js"></script>
-        <script src="scripts/views/result_form_view.js"></script>
+        <script src="scripts/views/result_form_addition_view.js"></script>
+        <script src="scripts/views/result_form_extension_view.js"></script>
+        <script src="scripts/views/result_form_both_view.js"></script>
         <script src="scripts/views/time_form_view.js"></script>
         
         <script src="scripts/main.js"></script>

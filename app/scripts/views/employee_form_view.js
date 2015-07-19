@@ -16,7 +16,9 @@
 		next: function(){
 			if($('#numberEmployees').val().length > 0){
 				employees = Number($('#numberEmployees').val());
+				edifyAnually = employees * edifyAnuallyPerPerson;
 				console.log(employees);
+				console.log(edifyAnually);
 				App.router.navigate('formPage02', { trigger : true });	
 			}
 		}

@@ -19,28 +19,42 @@
 			
 			if($('#email').val().length > 0){
 				email = $('#email').val();
+				//extension
+				returnOnInvestment1 = (trainingCost - edifyAnually) /edifyAnually;
+				//addition
+				trainingCostPerHour = 200*(trainingCost / trainingHours);
+				edifyPerHour = 200*(edifyAnually / trainingHours);
+				returnOnInvestment2= (trainingCostPerHour - edifyPerHour) / edifyPerHour;
 				
 				var calculationInformation = new App.Models.CalculationModel({
-					employees:employees,
+					employees: employees,
 					trainingCost: trainingCost,
 					trainingCostPerEmployee: trainingCostPerEmployee,
+					trainingCostPerHour: trainingCostPerHour,
 					trainingHours: trainingHours,
 					trainingHoursPerEmployee: trainingHoursPerEmployee,
+					edifyAnually: edifyAnually,
+					edifyPerHour: edifyPerHour,
 					returnType: returnType,
-					industry:industry,
-					email:email
+					returnOnInvestment1: returnOnInvestment1,
+					returnOnInvestment2: returnOnInvestment2,
+					industry: industry,
+					email: email
 				});
+				
 				calculationInformation.save(null,{
 					success:function(){
-						App.calculation_collection.add(calculationInformation)
+						App.calculation_collection.add(calculationInformation);
 						console.log(calculationInformation);
-						App.router.navigate('formResults', { trigger : true });
+						if(returnType == 'extend' ){
+							App.router.navigate('formResultsExtension', { trigger : true });
+						} else if (returnType == 'add') {
+							App.router.navigate('formResultsAddition', { trigger : true });
+						} else {
+							App.router.navigate('formResultsBoth', { trigger : true });
+						};
 					}
 				})
-				// calculationInformation.set('training')
-				
-				
-				
 			}
 		},
 		back: function(){

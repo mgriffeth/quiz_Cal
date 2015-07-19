@@ -1,10 +1,10 @@
 (function(){
-	App.Views.FormResultsView = Parse.View.extend({
+	App.Views.FormResultsAdditionView = Parse.View.extend({
 		events:{
 			'click #resultsToHome' : 'goHome'
 		},
 		
-		template: $('#formResults').html(),
+		template: $('#formResultsAddition').html(),
 		
 		initialize:function(){
 			this.render();

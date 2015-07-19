@@ -2,9 +2,15 @@ Parse.initialize("gQF0YOO9uWOyhIU8AXzGJGWKbZp6GqvOiwnGMihi", "ypxqeWsmiBA7wujkKJ
 var employees,
 	trainingCost,
 	trainingCostPerEmployee,
+	trainingCostPerHour,
 	trainingHours,
 	trainingHoursPerEmployee,
+	edifyAnually,
+	edifyAnuallyPerPerson = 60.00,
+	edifyPerHour,
 	returnType,
+	returnOnInvestment1,
+	returnOnInvestment2,
 	industry,
 	email;
 	

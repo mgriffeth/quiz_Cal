@@ -11,7 +11,9 @@
 			'formPage04' : 'formReturnType',
 			'formPage05' : 'formIndustry',
 			'formPage06' : 'formEmail',
-			'formResults' : 'formResults'
+			'formResultsAddition' : 'formResultsAddition',
+			'formResultsExtension' : 'formResultsExtension',
+			'formResultsBoth' : 'formResultsBoth'
 		},
 		
 		home: function (){
@@ -38,8 +40,14 @@
 		formEmail: function(){
 			new App.Views.FormEmailView();
 		},
-		formResults: function(){
-			new App.Views.FormResultsView();
+		formResultsAddition: function(){
+			new App.Views.FormResultsAdditionView();
+		},
+		formResultsExtension: function(){
+			new App.Views.FormResultsExtensionView();
+		},
+		formResultsBoth: function(){
+			new App.Views.FormResultsBothView();
 		}
 	});
 }());
