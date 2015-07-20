@@ -64,9 +64,9 @@
       
     <script type="text/template" id="homeView">
         <div class="box-main jumbotron col-md-8 col-md-offset-2">
-            <h1>See What Edify can do for you!</h1>
+            <h1>What will edify&trade; do for you?</h1>
             <p>
-                By filling out a short survey, we can show you how you can benefit from using edify to reinforce the knowledge that your business needs to thrive.
+                Answer these 5 questions to see how you and your company can benefit from edify&trade;.
             </p>
             <p>
                 <a class="btn btn-success btn-lg" id="startButton" role="button" name="name" value="">start survey</a>
@@ -82,10 +82,10 @@
               </div>
             </div>
             <div class="question-box col-md-12">
-                <h3>How many employees do you train per year?</h3>
+                <h3>How many employees in your company train each year?</h3>
             </div>
             <div class="input-box col-md-12">
-                    <input id="numberEmployees" class="form-field input-lg" type="number" name="name" value="">
+                    <input id="numberEmployees" class="form-field input-lg" type="number" name="name" min="0" value="">
             </div>
             <div class="btn-group col-md-12">
                 <input id="nextToTrainingCost" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="next">
@@ -104,11 +104,11 @@
             </div>
             
             <div class="question-box col-md-12">
-                <h3>How much do you spend on training annually?</h3>
+                <h3>How much does your company spend on training annually?</h3>
             </div>
             
             <div class="input-box col-md-12">
-                <input id="trainingCost" class="form-field input-lg" type="number" name="name" value="">
+                <input id="trainingCost" class="form-field input-lg" type="number" name="name" min="0" value="">
                 <br>
                 <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
                 <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
@@ -129,10 +129,10 @@
               </div>
             </div>
             <div class="question-box col-md-12">
-                <h3>How many hours a year does an employee train on average?</h3>    
+                <h3>On average, how many hours/year does an employee train?</h3>    
             </div>
             <div class="input-box col-md-12">
-                <input id="trainingTime" class="form-field input-lg" type="number" name="name" value="">
+                <input id="trainingTime" class="form-field input-lg" type="number" name="name" min="0" value="">
             </div>
             <div class=" col-md-12">
                 <input id="backToTrainingCost" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
@@ -247,7 +247,7 @@
     <script type="text/template" id="formResultsExtension">
         <div class="box-main jumbotron col-md-offset-2 col-md-8">
             <div class="result-title">
-                <h3>Results:</h3>
+                <h3>The Results are in!</h3>
                 <p>
                     Based on the information that you have provided us, this is your projected  return on investment.
                 </p>
@@ -289,7 +289,7 @@
                         <div class="well col-md-12" style="background-color:#5CB85C; border-style:none;">
                             <h4 class="list-group-item-heading">ROI:</h4>
                             <div class="center">
-                                <h2 id="return" class=" list-group-item-text"></h2>
+                                <h1 id="return" class=" list-group-item-text"></h1>
                             </div>  
                         </div>
                 </div>
@@ -322,13 +322,13 @@
                     </div>
             </div>
             <p class="center col-md-12">
-                Based on the information that you have provided us, this is your projected  return on investment.
+                Based on the information you provided, by using edify&trade;, your projected return on investment is:
             </p>
             <div class="result-pane col-md-12">
                     <div class="well col-md-12" style="background-color:#5CB85C; border-style:none;">
                         <h4 class="list-group-item-heading">ROI:</h4>
                         <div class="center">
-                            <h2 id="return2" class=" list-group-item-text"></h2>
+                            <h1 id="return2" class=" list-group-item-text"></h1>
                         </div>  
                     </div>
             </div>
@@ -342,7 +342,7 @@
                 
                 <div class="col-md-12">
                     <div class="result-title">
-                        <h3>Results:</h3>
+                        <h3>The Results are in!</h3>
                         <p>
                             Based on the information that you have provided us, this is your projected  return on investment.
                         </p>
