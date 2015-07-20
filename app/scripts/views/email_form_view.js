@@ -22,8 +22,8 @@
 				//extension
 				returnOnInvestment1 = (trainingCost - edifyAnually) /edifyAnually;
 				//addition
-				trainingCostPerHour = (trainingCost / trainingHours) * 80
-				edifyPerHour = (edifyAnually / trainingHours) * 80;
+				trainingCostPerHour = (trainingCost / trainingHours);
+				edifyPerHour = (edifyAnually / trainingHours);
 				returnOnInvestment2= (trainingCostPerHour - edifyPerHour) / edifyPerHour;
 				
 				var calculationInformation = new App.Models.CalculationModel({

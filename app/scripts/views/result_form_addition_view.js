@@ -19,8 +19,8 @@
 		      $modal.modal('hide'); 
 		      $bar.removeClass('animate');
 		      //$modal.modal('hide');   
-			  $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 20,2,','));
-  			$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 20,2,','));
+			  $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 80,2,','));
+  			$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 80,2,','));
   			
   			$('#return2').html(accounting.formatNumber(returnOnInvestment2 * 100,2,',') + '%');     
 		    }, 1500);
