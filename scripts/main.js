@@ -313,6 +313,10 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			
+			if(email){
+				$('#email').val(email);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);
