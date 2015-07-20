@@ -457,7 +457,7 @@
   			
   			$('#return').html(accounting.formatNumber(returnOnInvestment1 * 100,2,',') + '%');
 			  
-		    }, 1500);
+		}, 2000);
 			
 			
 			
