@@ -11,6 +11,8 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			
+			
 		},
 		render: function(){
 			this.$el.html(this.template);
