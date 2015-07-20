@@ -117,6 +117,9 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			if (employees){
+				$('#numberEmployees').val(employees);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);
@@ -144,6 +147,9 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			if(trainingCost){
+				$('#trainingCost').val(trainingCost);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);
@@ -206,6 +212,7 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			
 		},
 		render: function(){
 			this.$el.html(this.template);
@@ -229,6 +236,10 @@
 		},
 		getReturnType: function(e){
 			returnType = $(e.currentTarget).attr('value');
+			$('.returnButton').removeClass('btn-info')
+			// $('.returnButton').addClass('btn-success')
+			// $(e.currentTarget).removeClass('btn-success')
+			$(e.currentTarget).addClass('btn-info')
 			
 			// if(industry == 'Other'){
 			// 	$('#industryOtherDiv').removeClass('hidden');
@@ -275,6 +286,11 @@
 		},
 		getIndustry: function(e){
 		 	industry = $(e.currentTarget).attr('value');
+			
+			$('.industryButton').removeClass('btn-info')
+			// $('.industryButton').addClass('btn-success')
+			// $(e.currentTarget).removeClass('btn-success')
+			$(e.currentTarget).addClass('btn-info')
 			
 			if(industry == 'Other'){
 				$('#industryOtherDiv').removeClass('hidden');
@@ -482,6 +498,9 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			if(trainingHoursPerEmployee){
+				$('#trainingTime').val(trainingHoursPerEmployee);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);
