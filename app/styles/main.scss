@@ -59,9 +59,13 @@ body {
     margin-bottom: 10px;
 }
 .box-main{
+    margin-top: 50px;
     background-color:#595A60;
     color: #ffffff;
     border-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
 }
 .result-box{
     background-color: #5CB85C;
@@ -107,4 +111,10 @@ body {
 }
 #otherIndustry{
     color:#000000;
+}
+.well{
+    padding:10px;
+    h4{
+        color:black;    
+    }
 }
