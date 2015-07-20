@@ -1,0 +1,443 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Calc</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+      <!-- <div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+          <div class="modal-header">
+              <h1>Processing...</h1>
+          </div>
+          <div class="modal-body">
+              <div class="progress progress-striped active">
+                  <div class="bar" style="width: 100%;"></div>
+              </div>
+          </div>
+      </div> -->
+      <!-- <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img id="brandImg" alt="Brand" src="images/edify_emblem.png">
+          </a>
+        </div>
+      </div>
+    </nav> -->
+      <div class="container">
+          <div id="viewContainer" class="col-md-12">
+            
+             
+          </div>
+      </div>
+    
+      <!-- <div class="col-md-offset-3 col-md-6">
+          <div class="progress">
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    0%
+                  </div>
+            </div>
+          </div>
+          <h3>How many employees do you train per year?</h3>
+          <input class="input-xxlarge" type="number" name="name" value="">
+          <input class="btn btn-success btn-block" type="button" name="name" value="next">
+      </div> -->
+      
+    <script type="text/template" id="homeView">
+        <div class="box-main jumbotron col-md-6 col-md-offset-3">
+            <h1>See What Edify can do for you!</h1>
+            <p>
+                By filling out a short survey, we can show you how you can benefit from using edify to reinforce the knowledge that your business needs to thrive.
+            </p>
+            <p>
+                <a class="btn btn-success btn-lg" id="startButton" role="button" name="name" value="">start survey</a>
+            </p>
+        </div>
+    </script>
+    
+    <script type="text/template" id="formNumberEmployees">
+        <div class="box-main  jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                <span class="sr-only">0% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>How many employees do you train per year?</h3>
+            </div>
+            <div class="input-box col-md-12">
+                    <input id="numberEmployees" class="form-field input-lg" type="number" name="name" value="">
+            </div>
+            <div class="btn-group col-md-12">
+                <input id="nextToTrainingCost" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="next">
+            </div>
+        </div>
+    </script>
+    
+    <script type="text/template" id="formTrainingCost">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                <span class="sr-only">20% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>How much do you spend on training anually?</h3>
+            </div>
+            
+            <div class="input-box col-md-12">
+                <input id="trainingCost" class="form-field input-lg" type="number" name="name" value="">
+                <br>
+                <label for="">Total: <input id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
+                <label for="">Per Employee: <input id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
+            </div>
+            <div class="btn-group col-md-12">    
+                <input id="backToNumberEmployees" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToTrainingTime" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
+            </div>
+            
+        </div>
+    </script>
+    
+    <script type="text/template" id="formTrainingTime">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                <span class="sr-only">40% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>How many hours a year does an employee train on average?</h3>    
+            </div>
+            <div class="input-box col-md-12">
+                <input id="trainingTime" class="form-field input-lg" type="number" name="name" value="">
+            </div>
+            <div class="btn-group col-md-12">
+                <input id="backToTrainingCost" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToAvgSalary" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
+            </div>
+            
+        </div>
+    </script>
+    
+    <!-- <script type="text/template" id="formAverageSalary">
+        <div class="jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete</span>
+              </div>
+            </div>
+            <h3>What is the average salary of an employee at your company?</h3>
+            <input class="form-field" type="number" name="name" value="">
+            <div class="btn-group col-md-12">
+                <input id="backToTrainingTime" class="btn btn-success col-md-6" type="button" name="name" value="Back">
+                <input id="nextToIndustry" class="btn btn-success col-md-6" type="button" name="name" value="Next">
+            </div>
+            
+        </div>
+    </script> -->
+    <script type="text/template" id="formReturnType">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>You are looking to...</h3>    
+            </div>
+            <div class="input-box btn-group-vertical col-md-12">
+                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Extend Current Training">
+                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Add to Current Training">
+                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Both">
+            </div>
+            <!-- <div id="returnTypeGroup" class="inbut-box col-md-12 ">
+                <label class="col-md-12" for="">Extend Current training:
+                    <input type="radio" name="returnType" id="radioExtend" checked>
+                </label>
+                <label class="col-md-12" for="">Add to current training:
+                    <input type="radio" name="returnType" id="radioAdd">
+                </label>
+                <label class="col-md-12" for="">Both:
+                    <input type="radio" name="returnType" id="radioBoth">
+                </label>    
+            </div> -->
+            <div class="btn-group col-md-12">
+                <input id="backToTrainingTime" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
+            </div>
+            
+        </div>
+    </script>
+    
+    <script type="text/template" id="formIndustry">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">80% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>Select your industry:</h3>    
+            </div>
+            <div class="input-box col-md-12">
+                <div class="btn-group-vertical col-md-12">
+                    <input id="industryHospitatlity" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Hospitality">
+                    <input id="industryManufacturing" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Manufacturing">
+                    <input id="industryHealthcare" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Healthcare">
+                    <input id="industryTransportation" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Transportation">
+                    <input id="industryMining" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Mining">
+                    <input id="industryOther" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Other">
+                </div>
+                <div id="industryOtherDiv" class="form-group col-md-12 hidden">
+                    <label class="" for="numEmp">Industry Name:</label>
+                    <input class="col-md-12 input-lg" id="otherIndustry" type="text" name="name" placeholder="Your industry" min="0" value="">
+                </div>
+            </div>
+            <div class="btn-group col-md-12">
+                <input id="backToReturnType" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToEmail" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
+            </div>
+            
+        </div>
+    </script>
+    
+    <script type="text/template" id="formEmail">
+        <div class="box-main jumbotron col-md-offset-3 col-md-6">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>What is your email address?</h3>    
+            </div>
+            <div class="input-box col-md-12">
+                <input id="email" class="form-field  input-lg" type="email" name="name" value="" placeholder="example@gmail.com">
+            </div>
+            <div class="btn-group col-md-12">
+                <input id="backToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToResults" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Results">    
+            </div>
+        </div>
+    </script>
+    
+    <script type="text/template" id="formResultsExtension">
+        <div class=" col-md-offset-3 col-md-6">
+            <div class="result-title">
+                <h3>Results:</h3>
+            </div>
+            <ul class="list-group">
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">1.Total Cost</h4>
+                    <div class="center">
+                        <h2 id="total-cost" class=" result-text list-group-item-text"></h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">2.Cost per Employee</h4>
+                    <div class="center">
+                        <h2 id="cost-employee"class=" result-text list-group-item-text"></h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">3.Saving</h4>
+                    <div class="center">
+                        <h2 id="savings" class=" result-text list-group-item-text"></h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">4.Edify Cost per Hour</h4>
+                    <div class="center">
+                        <h2 id="edify-cost-hour"class=" result-text list-group-item-text"></h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="list-group result-pane">
+                  <a class="list-group-item ">
+                    <h4 class="list-group-item-heading">5.ROI</h4>
+                    <div class="center">
+                        <h2 id="return" class=" result-text list-group-item-text"></h2>
+                    </div>
+                  </a>
+                </div>
+            </ul>
+                 <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
+        </div>
+    </script>
+    
+    <script type="text/template" id="formResultsAddition">
+        <div class=" col-md-offset-3 col-md-6">
+            <div class="result-title">
+                    <h3 class="center" >Cost of adding an additional 20 hours of trainingper employee with :</h3>
+            </div>
+            
+            <div class="list-group result-pane col-md-6">
+              <a class="list-group-item ">
+                <h4 class="list-group-item-heading">Current Method:</h4>
+                <div class="center">
+                    <h2 id="add-hours-current" class=" list-group-item-text"></h2>
+                </div>
+              </a>
+            </div>
+            
+            <div class="list-group result-pane col-md-6">
+              <a class="list-group-item ">
+                <h4 class="list-group-item-heading">Edify:</h4>
+                <div class="center">
+                    <h2 id="add-hours-edify" class=" list-group-item-text"></h2>
+                </div>
+              </a>
+            </div>
+            
+            <div class="list-group result-pane col-md-12">
+              <a class="list-group-item ">
+                <h4 class="list-group-item-heading">Return on Investment:</h4>
+                <div class="center">
+                    <h2 id="return2" class=" list-group-item-text"></h2>
+                </div>
+              </a>
+            </div>
+            <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
+        </div>
+    </script>
+    
+        
+        <script type="text/template" id="formResultsBoth">
+            <div class="box-main jumbotron col-md-offset-3 col-md-6">
+                
+                <div class="col-md-12">
+                    <div class="result-title">
+                        <h3>Results:</h3>
+                    </div>
+                    <ul class="list-group">
+                        <div class="list-group result-pane">
+                          <a class="list-group-item ">
+                            <h4 class="list-group-item-heading">1.Total Cost</h4>
+                            <div class="center">
+                                <h2 id="total-cost" class=" result-text list-group-item-text"></h2>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="list-group result-pane">
+                          <a class="list-group-item ">
+                            <h4 class="list-group-item-heading">2.Cost per Employee</h4>
+                            <div class="center">
+                                <h2 id="cost-employee"class=" result-text list-group-item-text"></h2>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="list-group result-pane">
+                          <a class="list-group-item ">
+                            <h4 class="list-group-item-heading">3.Saving</h4>
+                            <div class="center">
+                                <h2 id="savings" class=" result-text list-group-item-text"></h2>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="list-group result-pane">
+                          <a class="list-group-item ">
+                            <h4 class="list-group-item-heading">4.Edify Cost per Hour</h4>
+                            <div class="center">
+                                <h2 id="edify-cost-hour"class=" result-text list-group-item-text"></h2>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="list-group result-pane">
+                          <a class="list-group-item ">
+                            <h4 class="list-group-item-heading">5.ROI</h4>
+                            <div class="center">
+                                <h2 id="return" class=" result-text list-group-item-text"></h2>
+                            </div>
+                          </a>
+                        </div>
+                    </ul>
+                        
+                </div>
+                
+                
+                
+                <div class=" col-md-12">
+                    <div class="result-title">
+                            <h3 class="center" >Cost of adding an additional 20 hours of training per employee with :</h3>
+                    </div>
+                    
+                    <div class="list-group result-pane col-md-6">
+                      <a class="list-group-item ">
+                        <h4 class="list-group-item-heading">Current Method:</h4>
+                        <div class="center">
+                            <h2 id="add-hours-current" class=" list-group-item-text"></h2>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div class="list-group result-pane col-md-6">
+                      <a class="list-group-item ">
+                        <h4 class="list-group-item-heading">Edify:</h4>
+                        <div class="center">
+                            <h2 id="add-hours-edify" class=" list-group-item-text"></h2>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div class="list-group result-pane col-md-12">
+                      <a class="list-group-item ">
+                        <h4 class="list-group-item-heading">Return on Investment:</h4>
+                        <div class="center">
+                            <h2 id="return2" class=" list-group-item-text"></h2>
+                        </div>
+                      </a>
+                    </div>
+                    <input id="resultsToHome" class="btn btn-success btn-lg" type="button" name="name" value="All Done!">
+                </div>
+            </div>
+        </script>
+    </script>
+    
+    <div class="modal js-loading-bar">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-body">
+         <h3>calculating...</h3>
+       <div class="progress progress-popup">
+        <div class="progress-bar"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+    
+    
+    
+
+    <script src="scripts/vendor.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    
+    <script type="text/javascript">
+      window.App = {};
+      App.Views = {};
+      App.Collections = {};
+      App.Models = {};
+      App.Routers = {};
+    </script>
+    
+        <script src="scripts/main.js"></script>
+</body>
+</html>
