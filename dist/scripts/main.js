@@ -13,7 +13,7 @@
 			trainingHours:'',
 			trainingHoursPerEmployee:'',
 			edifyAnually:'',
-			edfyPerHour:'',
+			edifyPerHour:'',
 			email:'',
 			industry:'',
 			returnType: '',
@@ -309,8 +309,8 @@
 				//extension
 				returnOnInvestment1 = (trainingCost - edifyAnually) /edifyAnually;
 				//addition
-				trainingCostPerHour = 200*(trainingCost / trainingHours);
-				edifyPerHour = 200*(edifyAnually / trainingHours);
+				trainingCostPerHour = (trainingCost / trainingHours);
+				edifyPerHour = (edifyAnually / trainingHours);
 				returnOnInvestment2= (trainingCostPerHour - edifyPerHour) / edifyPerHour;
 				
 				var calculationInformation = new App.Models.CalculationModel({
@@ -371,10 +371,10 @@
 		      $modal.modal('hide'); 
 		      $bar.removeClass('animate');
 		      //$modal.modal('hide');   
-			  $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 20,2,','));
-  			$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 20,2,','));
+			  $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 80,2,','));
+  			$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 80,2,','));
   			
-  			$('#return').html(accounting.formatNumber(returnOnInvestment1 * 100,2,',') + '%');     
+  			$('#return2').html(accounting.formatNumber(returnOnInvestment2 * 100,2,',') + '%');     
 		    }, 1500);
 		},
 		render: function(){
@@ -452,8 +452,8 @@
 			  $('#edify-cost-hour').html('$' + accounting.formatNumber(edifyPerHour,2,','));
 			  $('#return').html(accounting.formatNumber(returnOnInvestment1 * 100,2,',') + '%');
 			  
-			  $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 20,2,','));
-  			$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 20,2,','));
+			  $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 80,2,','));
+  			$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 80,2,','));
   			
   			$('#return').html(accounting.formatNumber(returnOnInvestment1 * 100,2,',') + '%');
 			  
