@@ -381,7 +381,7 @@
 			this.$el.html(this.template);
 		},
 		goHome: function(){
-			App.router.navigate('', { trigger : true });
+			App.router.navigate('formPage01', { trigger : true });
 		}
 	});
 }());
@@ -421,7 +421,7 @@
 			this.$el.html(this.template);
 		},
 		goHome: function(){
-			App.router.navigate('', { trigger : true });
+			App.router.navigate('formPage01', { trigger : true });
 		}
 	});
 }());
@@ -466,7 +466,7 @@
 			this.$el.html(this.template);
 		},
 		goHome: function(){
-			App.router.navigate('', { trigger : true });
+			App.router.navigate('formPage01', { trigger : true });
 		}
 	});
 }());
