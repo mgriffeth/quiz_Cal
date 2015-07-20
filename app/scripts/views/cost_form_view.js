@@ -10,6 +10,9 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			if(trainingCost){
+				$('#trainingCost').val(trainingCost);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);

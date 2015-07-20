@@ -11,6 +11,7 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			
 		},
 		render: function(){
 			this.$el.html(this.template);
@@ -34,6 +35,10 @@
 		},
 		getReturnType: function(e){
 			returnType = $(e.currentTarget).attr('value');
+			$('.returnButton').removeClass('btn-info')
+			// $('.returnButton').addClass('btn-success')
+			// $(e.currentTarget).removeClass('btn-success')
+			$(e.currentTarget).addClass('btn-info')
 			
 			// if(industry == 'Other'){
 			// 	$('#industryOtherDiv').removeClass('hidden');

@@ -35,6 +35,11 @@
 		getIndustry: function(e){
 		 	industry = $(e.currentTarget).attr('value');
 			
+			$('.industryButton').removeClass('btn-info')
+			// $('.industryButton').addClass('btn-success')
+			// $(e.currentTarget).removeClass('btn-success')
+			$(e.currentTarget).addClass('btn-info')
+			
 			if(industry == 'Other'){
 				$('#industryOtherDiv').removeClass('hidden');
 			} else {

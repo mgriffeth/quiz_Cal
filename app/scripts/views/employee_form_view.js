@@ -9,6 +9,9 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			if (employees){
+				$('#numberEmployees').val(employees);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);

@@ -10,6 +10,9 @@
 		initialize:function(){
 			this.render();
 			$('#viewContainer').html(this.$el);
+			if(trainingHoursPerEmployee){
+				$('#trainingTime').val(trainingHoursPerEmployee);
+			}
 		},
 		render: function(){
 			this.$el.html(this.template);

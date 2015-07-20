@@ -108,7 +108,9 @@
             </div>
             
             <div class="input-box col-md-12">
+                <span class="glyphicon glyphicon-usd"></span>
                 <input id="trainingCost" class="form-field input-lg" type="number" name="name" min="0" value="">
+                <span>.00</span>
                 <br>
                 <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
                 <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
@@ -168,10 +170,10 @@
             <div class="question-box col-md-12">
                 <h3>You are looking to...</h3>    
             </div>
-            <div class="input-box btn-group-vertical col-md-12">
-                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Extend Current Training">
-                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Add to Current Training">
-                <input id="" class="returnButton btn btn-success btn-lg btn-block" type="button" name="name" value="Both">
+            <div class="input-box col-md-12">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Extend Current Training">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Add to Current Training">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Both">
             </div>
             <!-- <div id="returnTypeGroup" class="inbut-box col-md-12 ">
                 <label class="col-md-12" for="">Extend Current training:
@@ -203,13 +205,13 @@
                 <h3>Select your industry:</h3>    
             </div>
             <div class="input-box col-md-12">
-                <div class="btn-group-vertical col-md-12">
-                    <input id="industryHospitatlity" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Hospitality">
-                    <input id="industryManufacturing" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Manufacturing">
-                    <input id="industryHealthcare" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Healthcare">
-                    <input id="industryTransportation" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Transportation">
-                    <input id="industryMining" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Mining">
-                    <input id="industryOther" class="industryButton btn btn-success btn-lg btn-block" type="button" name="name" value="Other">
+                <div class="col-md-12">
+                    <input id="industryHospitatlity" class="industryButton btn btn-lg btn-block" type="button" name="name" value="Hospitality">
+                    <input id="industryManufacturing" class="industryButton btn btn-lg btn-block" type="button" name="name" value="Manufacturing">
+                    <input id="industryHealthcare" class="industryButton btn btn-lg btn-block" type="button" name="name" value="Healthcare">
+                    <input id="industryTransportation" class="industryButton btn btn-lg btn-block" type="button" name="name" value="Transportation">
+                    <input id="industryMining" class="industryButton btn btn-lg btn-block" type="button" name="name" value="Mining">
+                    <input id="industryOther" class="industryButton btn btn-lg btn-block" type="button" name="name" value="Other">
                 </div>
                 <div id="industryOtherDiv" class="form-group col-md-12 hidden">
                     <label class="" for="numEmp">Industry Name:</label>
@@ -305,7 +307,7 @@
             </div>
             
             <div class="result-pane col-md-6">
-                    <div class="well col-md-12" style="background-color:#5CB85C; border-style:none;">
+                    <div class="well col-md-12 well-warn">
                         <h4 class="list-group-item-heading">Current Method:</h4>
                         <div class="center">
                             <h2 id="add-hours-current" class=" list-group-item-text"></h2>
@@ -314,7 +316,7 @@
             </div>
             
             <div class="result-pane col-md-6">
-                    <div class="well col-md-12" style="background-color:#5CB85C; border-style:none;">
+                    <div class="well col-md-12 well-pos">
                         <h4 class="list-group-item-heading">Edify:</h4>
                         <div class="center">
                             <h2 id="add-hours-edify" class=" list-group-item-text"></h2>
@@ -325,7 +327,7 @@
                 Based on the information you provided, by using edify&trade;, your projected return on investment is:
             </p>
             <div class="result-pane col-md-12">
-                    <div class="well col-md-12" style="background-color:#5CB85C; border-style:none;">
+                    <div class="well col-md-12 well-pos">
                         <h4 class="list-group-item-heading">ROI:</h4>
                         <div class="center">
                             <h1 id="return2" class=" list-group-item-text"></h1>
