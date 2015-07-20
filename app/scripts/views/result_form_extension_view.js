@@ -10,11 +10,11 @@
 			this.render();
 			$('#viewContainer').html(this.$el);
 			
-			$('#total-cost').html(edifyAnually);
-			$('#cost-hour').html(edifyPerHour);
-			$('#savings').html(trainingCost - edifyAnually);
-			$('#edify-cost-hour').html(edifyAnually);
-			$('#return').html(returnOnInvestment1);
+			$('#total-cost').html('$' + accounting.formatNumber(edifyAnually,2,','));
+			$('#cost-employee').html('$' + accounting.formatNumber(trainingCostPerEmployee,2,','));
+			$('#savings').html('$' + accounting.formatNumber((trainingCost - edifyAnually),2,','));
+			$('#edify-cost-hour').html('$' + accounting.formatNumber(edifyPerHour,2,','));
+			$('#return').html(accounting.formatNumber(returnOnInvestment1 * 100,2,',') + '%');
 		},
 		render: function(){
 			this.$el.html(this.template);

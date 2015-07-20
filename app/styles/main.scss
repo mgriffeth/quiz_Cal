@@ -3,7 +3,7 @@
 body {
   background: #000000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #E5E5E1; 
+  background-color: #ffffff; 
 }
 
 .hero-unit {
@@ -61,6 +61,7 @@ body {
 .box-main{
     background-color:#595A60;
     color: #ffffff;
+    border-style: none;
 }
 .result-box{
     background-color: #5CB85C;
@@ -69,9 +70,16 @@ body {
 .result-text{
     font-weight: 900;
 }
+.result-title{
+    margin-bottom:35px;
+    margin: 35px;
+}
 .result-pane{
     a{
         background-color: #5CB85C;
         color:#ffffff;
     }
+}
+.list-group-item-text{
+    margin:0;
 }
