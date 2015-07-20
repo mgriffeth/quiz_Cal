@@ -75,10 +75,14 @@ body {
     margin: 35px;
 }
 .result-pane{
+    
     a{
         background-color: #5CB85C;
         color:#ffffff;
     }
+}
+.list-group-item{
+        background-color: #5CB85C;
 }
 .list-group-item-text{
     margin:0;
@@ -100,4 +104,7 @@ body {
 
 .progress-popup {
    margin-bottom: 0;
+}
+#otherIndustry{
+    color:#000000;
 }

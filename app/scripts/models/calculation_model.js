@@ -13,7 +13,7 @@
 			trainingHours:'',
 			trainingHoursPerEmployee:'',
 			edifyAnually:'',
-			edfyPerHour:'',
+			edifyPerHour:'',
 			email:'',
 			industry:'',
 			returnType: '',
