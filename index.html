@@ -55,7 +55,7 @@
       
     <script type="text/template" id="homeView">
         <div class="box-main jumbotron col-md-8 col-md-offset-2">
-            <h1>What will edify&trade; do for you?</h1>
+            <h1>What will <img class="text-logo" src="images/edify_logo.png" alt="" /> do for you?</h1>
             <p>
                 Answer these 5 questions to see how you and your company can benefit from edify&trade;.
             </p>
@@ -73,13 +73,16 @@
               </div>
             </div>
             <div class="question-box col-md-12">
-                <h3>How many employees in your company train each year?</h3>
+                <h3>How many employees are working in your company?</h3>
             </div>
             <div class="input-box col-md-12">
                     <input id="numberEmployees" class="form-field input-lg" type="number" name="name" min="0" value="">
             </div>
             <div class="btn-group col-md-12">
                 <input id="nextToTrainingCost" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="next">
+            </div>
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
             </div>
         </div>
     </script>
@@ -99,18 +102,25 @@
             </div>
             
             <div class="input-box col-md-12">
+                <div class="col-md-12">
+                    <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
+                    <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
+                </div>
+                
                 <span class="">$</span>
                 <input id="trainingCost" class="form-field input-lg" type="number" name="name" min="0" value="">
-                <span>.00</span>
-                <br>
-                <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
-                <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
+                <label for="">Use Industry Average
+                    <input id="industryAvgCost" type="checkbox" name="name" value="">
+                </label>
+                
             </div>
             <div class=" col-md-12">    
                 <input id="backToNumberEmployees" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
                 <input id="nextToTrainingTime" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
-            
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
+            </div>
         </div>
     </script>
     
@@ -126,12 +136,17 @@
             </div>
             <div class="input-box col-md-12">
                 <input id="trainingTime" class="form-field input-lg" type="number" name="name" min="0" value="">
+                <label for="">Use Industry Average
+                    <input id="industryAvgHours" type="checkbox" name="name" value="">
+                </label>
             </div>
             <div class=" col-md-12">
                 <input id="backToTrainingCost" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
                 <input id="nextToAvgSalary" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
-            
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
+            </div>
         </div>
     </script>
     
@@ -151,7 +166,7 @@
             
         </div>
     </script> -->
-    <script type="text/template" id="formReturnType">
+    <script type="text/template" id="formCompanyObjective">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
               <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
@@ -159,12 +174,14 @@
               </div>
             </div>
             <div class="question-box col-md-12">
-                <h3>You are looking to...</h3>    
+                <h3>Your company goals include.</h3>    
             </div>
             <div class="input-box col-md-12">
-                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Extend Current Training">
-                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Add to Current Training">
-                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Both">
+                <input id="" class="objectiveButton btn btn-lg btn-block" type="button" name="name" value="Reinforce Training">
+                <input id="" class="objectiveButton btn btn-lg btn-block" type="button" name="name" value="Further Engage Workforce">
+                <input id="" class="objectiveButton btn btn-lg btn-block" type="button" name="name" value="Boost Compliance">
+                <input id="" class="objectiveButton btn btn-lg btn-block" type="button" name="name" value="Increase Retention">
+                <input id="" class="objectiveButton btn btn-lg btn-block" type="button" name="name" value="All of the Above">
             </div>
             <!-- <div id="returnTypeGroup" class="inbut-box col-md-12 ">
                 <label class="col-md-12" for="">Extend Current training:
@@ -181,7 +198,9 @@
                 <input id="backToTrainingTime" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
                 <input id="nextToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
-            
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
+            </div>
         </div>
     </script>
     
@@ -213,11 +232,38 @@
                 <input id="backToReturnType" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
                 <input id="nextToEmail" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
             </div>
-            
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="formReturnType">
+        <div class="box-main col-md-offset-2 col-md-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete</span>
+              </div>
+            </div>
+            <div class="question-box col-md-12">
+                <h3>Show me how I save when I use edify&trade; to</h3>
+            </div>
+            <div class="col-md-12">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Increase Current Training">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Add training">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="both">
+            </div>
+            <div class=" col-md-12">
+                <input id="backToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
+                <input id="nextToResults" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Results">    
+            </div>
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
+            </div>
         </div>
     </script>
     
-    <script type="text/template" id="formEmail">
+    
+    <!-- <script type="text/template" id="formEmail">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
               <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
@@ -234,8 +280,11 @@
                 <input id="backToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
                 <input id="nextToResults" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Results">    
             </div>
+            <div class="col-md-offset-9 col-md-3">
+                    <img class="box-logo" src="images/edify_logo.png" alt="" />
+            </div>
         </div>
-    </script>
+    </script> -->
     
     <script type="text/template" id="formResultsExtension">
         <div class="box-main jumbotron col-md-offset-2 col-md-8">
@@ -448,6 +497,159 @@
             </div>
         </script>
     </script>
+    
+    <script type="text/template" id="formResults1">
+        <div class="box-main jumbotron col-md-offset-2 col-md-8">
+            <div class="col-md-12">
+                <div class="result-title">
+                    <h2>The Results are in!</h2>
+                    <p>
+                         Based on your information, this is how much you would save by doubling your training with edify&trade; vs your current methods.
+                    </p>
+                    <!-- <p>
+                        Based on the information that you have provided us, this is your projected  return on investment.
+                    </p> -->
+                </div>
+                <ul class="list-group">
+                <div class="result-pane col-md-12">
+                        <div class="well col-md-12 well-pos">
+                            <h4 class="list-group-item-heading">Savings:</h4>
+                            <div class="center">
+                                <h1 id="return" class=" list-group-item-text"></h1>
+                            </div>  
+                        </div>
+                </div>    
+            </div>
+            <div class=" col-md-12">
+                <input id="detailedResults" class="btn btn-lg btn-block btn-success" type="button" name="name" value="Get Detailed Results">
+                <div id="companyForm" class="col-md-6 col-md-offset-3 hidden">
+                    <div class="col-md-12 form-group">
+                        <label for="">Name:</label>
+                        <input id="name" class="form-control" type="text" name="name" value="">
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label for="">Company:</label> 
+                        <input id="companyName" class="form-control" type="text" name="name" value="">   
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label for="">Email:</label>    
+                        <input id="email" class="form-control" type="email" name="name" value="">
+                    </div>
+                    <input id="resultsToHome" class="btn btn-info btn-block" type="button" name="name" value="Submit">
+                </div>
+            </div>
+        </div>
+    </script>
+</script>
+
+<script type="text/template" id="formResults2">
+    <div class="box-main jumbotron col-md-offset-2 col-md-8">
+        <div class="col-md-12">
+            <div class="result-title">
+                <h2>The Results are in!</h2>
+                <p>
+                     Based on your information, This is what you would save if you were to add 10 hours of reinforcement per employee with edify&trade; vs your current methods.
+                </p>
+                <!-- <p>
+                    Based on the information that you have provided us, this is your projected  return on investment.
+                </p> -->
+            </div>
+            <ul class="list-group">
+            <div class="result-pane col-md-12">
+                    <div class="well col-md-12 well-pos">
+                        <h4 class="list-group-item-heading">Savings:</h4>
+                        <div class="center">
+                            <h1 id="return" class=" list-group-item-text"></h1>
+                        </div>  
+                    </div>
+            </div>    
+        </div>
+        <div class=" col-md-12">
+            <input id="detailedResults" class="btn btn-lg btn-block btn-success" type="button" name="name" value="Get Detailed Results">
+            <div id="companyForm" class="col-md-6 col-md-offset-3 hidden">
+                <div class="col-md-12 form-group">
+                    <label for="">Name:</label>
+                    <input id="name" class="form-control" type="text" name="name" value="">
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="">Company:</label> 
+                    <input id="companyName" class="form-control" type="text" name="name" value="">   
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="">Email:</label>    
+                    <input id="email" class="form-control" type="email" name="name" value="">
+                </div>
+                <input id="resultsToHome" class="btn btn-info btn-block" type="button" name="name" value="Submit">
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="formResults3">
+    <div class="box-main jumbotron col-md-offset-2 col-md-8">
+        <div class="col-md-12">
+            <div class="result-title">
+                <h2>The Results are in!</h2>
+                <p>
+                     Based on your information, this is how much you would save by doubling your training with edify&trade; vs your current methods.
+                </p>
+                <!-- <p>
+                    Based on the information that you have provided us, this is your projected  return on investment.
+                </p> -->
+            </div>
+            <ul class="list-group">
+            <div class="result-pane col-md-12">
+                    <div class="well col-md-12 well-pos">
+                        <h4 class="list-group-item-heading">Savings:</h4>
+                        <div class="center">
+                            <h1 id="return1" class=" list-group-item-text"></h1>
+                        </div>  
+                    </div>
+            </div>    
+        </div>
+        <div class="col-md-12">
+            <div class="result-title">
+                <p>
+                     Based on your information, This is what you would save if you were to add 10 hours of reinforcement per employee with edify&trade; vs your current methods.
+                </p>
+                <!-- <p>
+                    Based on the information that you have provided us, this is your projected  return on investment.
+                </p> -->
+            </div>
+            <ul class="list-group">
+            <div class="result-pane col-md-12">
+                    <div class="well col-md-12 well-pos">
+                        <h4 class="list-group-item-heading">Savings:</h4>
+                        <div class="center">
+                            <h1 id="return2" class=" list-group-item-text"></h1>
+                        </div>  
+                    </div>
+            </div>    
+        </div>
+        <div class=" col-md-12">
+            <input id="detailedResults" class="btn btn-lg btn-block btn-success" type="button" name="name" value="Get Detailed Results">
+            <div id="companyForm" class="col-md-6 col-md-offset-3 hidden">
+                <div class="col-md-12 form-group">
+                    <label for="">Name:</label>
+                    <input id="name" class="form-control" type="text" name="name" value="">
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="">Company:</label> 
+                    <input id="companyName" class="form-control" type="text" name="name" value="">   
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="">Email:</label>    
+                    <input id="email" class="form-control" type="email" name="name" value="">
+                </div>
+                <input id="resultsToHome" class="btn btn-info btn-block" type="button" name="name" value="Submit">
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+</script>
     
     <div class="modal js-loading-bar">
  <div class="modal-dialog">
