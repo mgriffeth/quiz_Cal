@@ -18,12 +18,16 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			if($('#trainingTime').val().length > 0){
+			if($('#industryAvgHours').is(':checked')){
+				trainingHoursPerEmployee = 28;
+				trainingHours = trainingHoursPerEmployee * employees;
+				App.router.navigate('formPage04', { trigger : true });
+			} else if ($('#trainingTime').val().length > 0){
 				trainingHoursPerEmployee = Number($('#trainingTime').val());
 				trainingHours = trainingHoursPerEmployee * employees;
 				App.router.navigate('formPage04', { trigger : true });
 			}
-			
+			console.log(trainingHoursPerEmployee);
 		},
 		back: function(){
 			App.router.navigate('formPage02', { trigger : true });

@@ -12,6 +12,9 @@ var employees,
 	returnOnInvestment1,
 	returnOnInvestment2,
 	industry,
+	companyObjective,
+	companyName,
+	name,
 	email;
 	
 	// Setup

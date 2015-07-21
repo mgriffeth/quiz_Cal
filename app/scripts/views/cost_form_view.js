@@ -18,7 +18,13 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			if($('#trainingCost').val().length > 0){
+			if($('#industryAvgCost').is(':checked')){
+				trainingCostPerEmployee = 1011.33333;
+				// accounting.formatNumber(1011.33333,2,',');
+				trainingCost = trainingCostPerEmployee * employees;
+				
+				App.router.navigate('formPage03', { trigger : true });
+			} else if($('#trainingCost').val().length > 0){
 				if($('#radioTimeTotal').is(':checked')) {
 					trainingCost = Number($('#trainingCost').val());
 					trainingCostPerEmployee = trainingCost / employees;

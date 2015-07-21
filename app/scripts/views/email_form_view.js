@@ -59,7 +59,7 @@
 						// 	App.router.navigate('formResultsAddition', { trigger : true });
 						// } else {
 						// 	App.router.navigate('formResultsBoth', { trigger : true });
-						};
+						// };
 					}
 				})
 			}

@@ -17,6 +17,9 @@
 			email:'',
 			industry:'',
 			returnType: '',
+			companyObjective:'',
+			companyName:'',
+			name:'',
 			returnOnInvestment1:'',
 			returnOnInvestment2:'',
 			anualSavings:''

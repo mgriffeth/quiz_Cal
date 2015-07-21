@@ -8,12 +8,15 @@
 			'formPage01' : 'formNumberEmployees',
 			'formPage02' : 'formTrainingCost',
 			'formPage03' : 'formTrainingTime',
-			'formPage04' : 'formReturnType',
+			'formPage04' : 'formCompanyObjectives',
 			'formPage05' : 'formIndustry',
-			'formPage06' : 'formEmail',
+			'formPage06' : 'formReturnType',
 			'formResultsAddition' : 'formResultsAddition',
 			'formResultsExtension' : 'formResultsExtension',
-			'formResultsBoth' : 'formResultsBoth'
+			'formResultsBoth' : 'formResultsBoth',
+			'results1View' : 'results1View',
+			'results2View' : 'results2View',
+			'results3View' : 'results3View'
 		},
 		
 		home: function (){
@@ -48,6 +51,18 @@
 		},
 		formResultsBoth: function(){
 			new App.Views.FormResultsBothView();
+		},
+		formCompanyObjectives: function(){
+			new App.Views.FormCompanyObjectiveView();
+		},
+		results1View: function(){
+			new App.Views.ResultsOneView();
+		},
+		results2View: function(){
+			new App.Views.ResultsTwoView();
+		},
+		results3View: function(){
+			new App.Views.ResultsThreeView();
 		}
 	});
 }());
