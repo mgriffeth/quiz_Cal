@@ -51,12 +51,14 @@
 						App.calculation_collection.add(calculationInformation);
 						console.log(calculationInformation);
 						
-						if(returnType == 'Extend Current Training' ){
-							App.router.navigate('formResultsExtension', { trigger : true });
-						} else if (returnType == 'Add to Current Training') {
-							App.router.navigate('formResultsAddition', { trigger : true });
-						} else {
-							App.router.navigate('formResultsBoth', { trigger : true });
+						App.router.navigate('formResultsBoth', { trigger : true });
+						
+						// if(returnType == 'Extend Current Training' ){
+						// 	App.router.navigate('formResultsExtension', { trigger : true });
+						// } else if (returnType == 'Add to Current Training') {
+						// 	App.router.navigate('formResultsAddition', { trigger : true });
+						// } else {
+						// 	App.router.navigate('formResultsBoth', { trigger : true });
 						};
 					}
 				})

@@ -64,7 +64,7 @@
       
     <script type="text/template" id="homeView">
         <div class="box-main jumbotron col-md-8 col-md-offset-2">
-            <h1>What will edify&trade; do for you?</h1>
+            <h1>What will <img class="text-logo" src="images/edify_logo.png" alt="" /> do for you?</h1>
             <p>
                 Answer these 5 questions to see how you and your company can benefit from edify&trade;.
             </p>
@@ -82,7 +82,7 @@
               </div>
             </div>
             <div class="question-box col-md-12">
-                <h3>How many employees in your company train each year?</h3>
+                <h3>How many employees are working in your company?</h3>
             </div>
             <div class="input-box col-md-12">
                     <input id="numberEmployees" class="form-field input-lg" type="number" name="name" min="0" value="">
@@ -108,12 +108,17 @@
             </div>
             
             <div class="input-box col-md-12">
+                <div class="col-md-12">
+                    <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
+                    <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
+                </div>
+                
                 <span class="">$</span>
                 <input id="trainingCost" class="form-field input-lg" type="number" name="name" min="0" value="">
-                <span>.00</span>
-                <br>
-                <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
-                <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
+                <label for="">Use Industry Average
+                    <input type="checkbox" name="name" value="">
+                </label>
+                
             </div>
             <div class=" col-md-12">    
                 <input id="backToNumberEmployees" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
@@ -135,6 +140,9 @@
             </div>
             <div class="input-box col-md-12">
                 <input id="trainingTime" class="form-field input-lg" type="number" name="name" min="0" value="">
+                <label for="">Use Industry Average
+                    <input type="checkbox" name="name" value="">
+                </label>
             </div>
             <div class=" col-md-12">
                 <input id="backToTrainingCost" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
@@ -168,12 +176,14 @@
               </div>
             </div>
             <div class="question-box col-md-12">
-                <h3>You are looking to...</h3>    
+                <h3>Please select your companies objectives.</h3>    
             </div>
             <div class="input-box col-md-12">
-                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Extend Current Training">
-                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Add to Current Training">
-                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Both">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Reinforce Training">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Further Engage Workforce">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Boost Compliance">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="Increase Retention">
+                <input id="" class="returnButton btn btn-lg btn-block" type="button" name="name" value="All of the Above">
             </div>
             <!-- <div id="returnTypeGroup" class="inbut-box col-md-12 ">
                 <label class="col-md-12" for="">Extend Current training:
