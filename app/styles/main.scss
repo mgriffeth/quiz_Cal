@@ -1,5 +1,6 @@
 $primary-color: #6D6E71;
 $primary-color2: #EDEDED;
+$primary-text-color: #6D6E71;
 // Custom Styles
 body {
   background: #000000;
@@ -59,6 +60,9 @@ body {
     text-align: center;
     min-height: 70px;
     margin-bottom: 20px;
+    input{
+        text-align:center;
+    }
 }
 
 .result-box{
@@ -141,7 +145,7 @@ body {
 }
 .box-logo{
     max-height:40px;
-    // background-color: white;
+    background-color: $primary-color2;
     border-radius: 5px;
     margin-top:15px;
 }
@@ -150,12 +154,12 @@ body {
 }
 .box-main{
     margin-top: 50px;
-    // background-color:$primary-color;
+    background-color:$primary-color;
     color: #ffffff;
     border-style: none;
     // padding: 20px;
     padding: 2px !important;
-    // border-radius: 10px;
+    border-radius: 5px;
 }
 
 .main-inside{
@@ -166,6 +170,10 @@ body {
     padding:20px;
      h1{
         font-weight: 200;
+     }
+     h3{
+         font-weight: 200;
+         font-size: 30px;
      }
 }
 .progress{
