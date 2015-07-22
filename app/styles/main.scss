@@ -1,4 +1,5 @@
-
+$primary-color: #6D6E71;
+$primary-color2: #EDEDED;
 // Custom Styles
 body {
   background: #000000;
@@ -40,6 +41,7 @@ body {
 }
 #brandImg{
     max-height: 35px;
+    background-color:$primary-color2;
 }
 .form-field{
     margin: 1rem;
@@ -109,29 +111,32 @@ body {
     h4{
         color:black;    
     }
+    h1{
+        color:#FFFFFF;    
+    }
 }
-.test{
-    height:10px;
-    width: 100%;
-}
+// .test{
+//     height:10px;
+//     width: 100%;
+// }
 .well-pos{
     background-color:#5CB85C;
     border-style:none;
 }
-.well-warn{
-    background-color: #F0AD4E;
-    border-style:none;
-}
-.well-info{
-    background-color:#5BC0DE;
-    border-style:none;
-}
-.radio-label{
-    margin: 5px;
-}
+// .well-warn{
+//     background-color: #F0AD4E;
+//     border-style:none;
+// }
+// .well-info{
+//     background-color:#5BC0DE;
+//     border-style:none;
+// }
+// .radio-label{
+//     margin: 5px;
+// }
 .text-logo{
     max-height:80px;
-    background-color:#F5F5F5;
+    background-color:$primary-color2;
     border-radius: 5px;
 }
 .box-logo{
@@ -145,7 +150,7 @@ body {
 }
 .box-main{
     margin-top: 50px;
-    background-color:#696C75;
+    // background-color:$primary-color;
     color: #ffffff;
     border-style: none;
     // padding: 20px;
@@ -154,9 +159,10 @@ body {
 }
 
 .main-inside{
-    background-color:#F5F5F5;
-    color:#6F7073;
-    // border-radius:5px;
+    background-color:$primary-color2;
+    color:$primary-color;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
     padding:20px;
      h1{
         font-weight: 200;
@@ -165,7 +171,9 @@ body {
 .progress{
     margin-bottom: 3px;
     margin-top: 1px;
-    border-radius:0;
+    height:30px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
 }
 // .box-main{
 //     margin-top: 50px;
