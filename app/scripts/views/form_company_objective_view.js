@@ -25,7 +25,7 @@
 
 		},
 		back: function(){
-			App.router.navigate('formPage02', { trigger : true });
+			App.router.navigate('formPage01', { trigger : true });
 		},
 		getObjective: function(e){
 			companyObjective = $(e.currentTarget).attr('value');

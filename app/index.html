@@ -65,10 +65,10 @@
     <script type="text/template" id="homeView">
         <div class="box-main jumbotron opening col-md-8 col-md-offset-2">
             <div class="main-inside opening col-md-12">
-                <h1>What will <img class="text-logo" src="images/edify_logo.png" alt="" /><br>do for you?</h1>
+                <h1>What can <img class="text-logo" src="images/edify_logo.png" alt="" /><br>do for you?</h1>
                 <div class="col-md-10 col-md-offset-2">
                     <p>
-                        Answer these 5 questions to see the cost savings you can achieve by using edify&trade;.
+                        Answer these 4 questions to see the cost savings you can achieve by using edify&trade;.
                     </p>
                 </div>
                 
@@ -83,8 +83,8 @@
     <script type="text/template" id="formNumberEmployees">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
-              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                <span class="sr-only">0% Complete</span>
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                <span class="sr-only">25% Complete</span>
               </div>
             </div>
             <div class="main-inside col-md-12">
@@ -107,7 +107,7 @@
         </div>
     </script>
     
-    <script type="text/template" id="formTrainingCost">
+    <!-- <script type="text/template" id="formTrainingCost">
         <div class="box-main col-md-offset-2 col-md-8">
             
                 <div class="progress">
@@ -120,16 +120,16 @@
                 <div class="center col-md-12">
                     <h3>How much, on average, does your company spend on training per employee annually? ( If left blank, the U.S. industry average will be used by default. )</h3>
                     <div class="input-box col-md-12">
-                        <!-- <div class="col-md-12">
+                        <div class="col-md-12">
                             <label class="radio-label" for="">Total: <input class="" id="radioTimeTotal" type="radio" name="trainHours" value="total" checked></label>
                             <label class="radio-label" for="">Per Employee: <input class="" id="radioTimePerEmployee" type="radio" name="trainHours" value="employee"></label>
-                        </div> -->
+                        </div>
                         
                         <span class="">$</span>
                         <input id="trainingCost" class="form-field input-lg" type="number" name="name" min="0" value="">
-                        <!-- <label for="">Use Industry Average
+                        <label for="">Use Industry Average
                             <input id="industryAvgCost" type="checkbox" name="name" value="">
-                        </label> -->
+                        </label>
                         
                     </div>
                     <div class=" col-md-8 col-md-offset-2">    
@@ -146,9 +146,9 @@
             
             
         </div>
-    </script>
+    </script> -->
     
-    <script type="text/template" id="formTrainingTime">
+    <!-- <script type="text/template" id="formTrainingTime">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
               <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -172,7 +172,7 @@
                     <img class="box-logo" src="images/edify_logo.png" alt="" />
             </div>
         </div>
-    </script>
+    </script> -->
     
     <!-- <script type="text/template" id="formAverageSalary">
         <div class="jumbotron col-md-offset-3 col-md-6">
@@ -193,13 +193,14 @@
     <script type="text/template" id="formCompanyObjective">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
-              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                <span class="sr-only">40% Complete</span>
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                <span class="sr-only">50% Complete</span>
               </div>
             </div>
             <div class="main-inside col-md-12">
                 <div class="question-box col-md-12">
-                    <h3>Your company goals include.</h3>    
+                    <h3>Your company goals include.</h3> 
+                    <small>* Please select all that apply.</small>   
                 </div>
                 <div class="input-box col-md-8 col-md-offset-2">
                     <input id="" class="objectiveButton btn btn-lg btn-block btn-primary" type="button" name="name" value="Reinforce Training">
@@ -208,20 +209,12 @@
                     <input id="" class="objectiveButton btn btn-lg btn-block btn-primary" type="button" name="name" value="Increase Retention">
                     <input id="" class="objectiveButton btn btn-lg btn-block btn-primary" type="button" name="name" value="All of the Above">
                 </div>
-                <!-- <div id="returnTypeGroup" class="inbut-box col-md-12 ">
-                    <label class="col-md-12" for="">Extend Current training:
-                        <input type="radio" name="returnType" id="radioExtend" checked>
-                    </label>
-                    <label class="col-md-12" for="">Add to current training:
-                        <input type="radio" name="returnType" id="radioAdd">
-                    </label>
-                    <label class="col-md-12" for="">Both:
-                        <input type="radio" name="returnType" id="radioBoth">
-                    </label>    
-                </div> -->
-                <div class=" col-md-8 col-md-offset-2">
-                    <input id="backToTrainingTime" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
-                    <input id="nextToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
+                <div class=" col-md-12">
+                    <div class="col-md-4 button-box col-md-offset-2">
+                        <input id="backToTrainingTime" class="btn btn-success btn-lg btn-block" type="button" name="name" value="Back">
+                    </div>
+                    <div class="col-md-4 button-box">
+                        <input id="nextToIndustry" class="btn btn-success btn-lg btn-block" type="button" name="name" value="Results">    </div>
                 </div>
                 <div class="col-md-offset-9 col-md-3">
                         <img class="box-logo" src="images/edify_logo.png" alt="" />
@@ -234,8 +227,8 @@
     <script type="text/template" id="formIndustry">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
-              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                <span class="sr-only">60% Complete</span>
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                <span class="sr-only">75% Complete</span>
               </div>
             </div>
             <div class="main-inside col-md-12">
@@ -256,9 +249,12 @@
                         <input class="col-md-12 input-lg" id="otherIndustry" type="text" name="name" placeholder="Your industry" min="0" value="">
                     </div>
                 </div>
-                <div class=" col-md-8 col-md-offset-2">
-                    <input id="backToReturnType" class="btn-left btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
-                    <input id="nextToEmail" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Next">
+                <div class=" col-md-12">
+                    <div class="col-md-4 button-box col-md-offset-2">
+                        <input id="backToReturnType" class="btn btn-success btn-lg btn-block" type="button" name="name" value="Back">
+                    </div>
+                    <div class="col-md-4 button-box">
+                        <input id="nextToEmail" class="btn btn-success btn-lg btn-block" type="button" name="name" value="Results">    </div>
                 </div>
                 <div class="col-md-offset-9 col-md-3">
                         <img class="box-logo" src="images/edify_logo.png" alt="" />
@@ -271,8 +267,8 @@
     <script type="text/template" id="formReturnType">
         <div class="box-main col-md-offset-2 col-md-8">
             <div class="progress">
-              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <span class="sr-only">80% Complete</span>
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete</span>
               </div>
             </div>
             <div class="main-inside col-md-12">
@@ -281,13 +277,16 @@
                 </div>
                 
                 <div class="input-box col-md-8 col-md-offset-2">
-                    <input id="" class="returnButton btn btn-lg btn-block btn-primary" type="button" name="name" value="Increase Current Training">
+                    <input id="" class="returnButton btn btn-lg btn-block btn-primary" type="button" name="name" value="Extend the Value of Current Training">
                     <input id="" class="returnButton btn btn-lg btn-block btn-primary" type="button" name="name" value="Add training">
                     <input id="" class="returnButton btn btn-lg btn-block btn-primary" type="button" name="name" value="both">
                 </div>
-                <div class=" col-md-8 col-md-offset-2">
-                    <input id="backToIndustry" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Back">
-                    <input id="nextToResults" class="btn btn-success btn-lg col-md-6" type="button" name="name" value="Results">    
+                <div class=" col-md-12">
+                    <div class="col-md-4 button-box col-md-offset-2">
+                        <input id="backToIndustry" class="btn btn-success btn-lg btn-block" type="button" name="name" value="Back">
+                    </div>
+                    <div class="col-md-4 button-box">
+                        <input id="nextToResults" class="btn btn-success btn-lg btn-block" type="button" name="name" value="Results">    </div>
                 </div>
                 <div class="col-md-offset-9 col-md-3">
                         <img class="box-logo" src="images/edify_logo.png" alt="" />
@@ -321,7 +320,7 @@
         </div>
     </script> -->
     
-    <script type="text/template" id="formResultsExtension">
+    <!-- <script type="text/template" id="formResultsExtension">
         <div class="box-main jumbotron col-md-offset-2 col-md-8">
             <div class="result-title">
                 <h3>The Results are in!</h3>
@@ -329,7 +328,7 @@
                     Based on the information that you have provided us, this is your projected  return on investment.
                 </p>
             </div>
-            <ul class="list-group">
+            <ul class="list-group"> -->
                 <!-- <div class="list-group result-pane">
                   <a class="list-group-item ">
                     <h4 class="list-group-item-heading">1.Total Cost</h4>
@@ -362,7 +361,7 @@
                     </div>
                   </a>
                 </div> -->
-                <div class="result-pane col-md-12">
+                <!-- <div class="result-pane col-md-12">
                         <div class="well col-md-12" style="background-color:#5CB85C; border-style:none;">
                             <h4 class="list-group-item-heading">ROI:</h4>
                             <div class="center">
@@ -373,9 +372,9 @@
             </ul>
                  <input id="resultsToHome" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="Calculate Another Investment">
         </div>
-    </script>
+    </script> -->
     
-    <script type="text/template" id="formResultsAddition">
+    <!-- <script type="text/template" id="formResultsAddition">
         <div class="box-main jumbotron col-md-offset-2 col-md-8">
             <div class="result-title">
                     <h3 class="center" >Cost of adding an additional 80 hours of training with :</h3>
@@ -411,10 +410,10 @@
             </div>
             <input id="resultsToHome" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="Calculate Another Investment">
         </div>
-    </script>
+    </script> -->
     
         
-        <script type="text/template" id="formResultsBoth">
+        <!-- <script type="text/template" id="formResultsBoth">
             <div class="box-main jumbotron col-md-offset-2 col-md-8">
                 
                 <div class="col-md-12">
@@ -424,7 +423,7 @@
                             Based on the information that you have provided us, this is your projected  return on investment.
                         </p>
                     </div>
-                    <ul class="list-group">
+                    <ul class="list-group"> -->
                         <!-- <div class="list-group result-pane">
                           <a class="list-group-item ">
                             <h4 class="list-group-item-heading">1.Total Cost</h4>
@@ -467,7 +466,7 @@
                         </div>
                     </ul> -->
                     
-                    <div class="result-pane col-md-12">
+                    <!-- <div class="result-pane col-md-12">
                             <div class="well col-md-12 well-pos">
                                 <h4 class="list-group-item-heading">ROI:</h4>
                                 <div class="center">
@@ -476,14 +475,14 @@
                             </div>
                     </div>
                         
-                </div>
+                </div> -->
                 
                 
                 
-                <div class=" col-md-12">
+                <!-- <div class=" col-md-12">
                     <div class="result-title">
                             <h3 class="center" >Cost of adding an additional 80 hours of training with :</h3>
-                    </div>
+                    </div> -->
                     
                     <!-- <div class="list-group result-pane col-md-6">
                       <a class="list-group-item ">
@@ -493,14 +492,14 @@
                         </div>
                       </a>
                     </div> -->
-                    <div class="result-pane col-md-6">
+                    <!-- <div class="result-pane col-md-6">
                             <div class="well col-md-12 well-warn">
                                 <h4 class="list-group-item-heading">Current Method:</h4>
                                 <div class="center">
                                     <h2 id="add-hours-current" class=" list-group-item-text"></h2>
                                 </div>  
                             </div>
-                    </div>
+                    </div> -->
                     
                     <!-- <div class="list-group result-pane col-md-6">
                       <a class="list-group-item ">
@@ -510,7 +509,7 @@
                         </div>
                       </a>
                     </div> -->
-                    <div class="result-pane col-md-6">
+                    <!-- <div class="result-pane col-md-6">
                             <div class="well col-md-12 well-pos">
                                 <h4 class="list-group-item-heading">Edify:</h4>
                                 <div class="center">
@@ -518,7 +517,7 @@
                                 </div>  
                             </div>
                     </div>
-                    
+                     -->
                     <!-- <div class="list-group result-pane col-md-12">
                       <a class="list-group-item ">
                         <h4 class="list-group-item-heading">Return on Investment:</h4>
@@ -527,11 +526,11 @@
                         </div>
                       </a>
                     </div> -->
-                    <input id="resultsToHome" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="Calculate Another Investment">
+                    <!-- <input id="resultsToHome" class="btn btn-success btn-lg col-md-12" type="button" name="name" value="Calculate Another Investment">
                 </div>
             </div>
         </script>
-    </script>
+    </script> -->
     
     <script type="text/template" id="formResults1">
         <div class="box-main jumbotron col-md-offset-2 col-md-8">
@@ -589,7 +588,7 @@
     </script>
 </script>
 
-<script type="text/template" id="formResults2">
+<!-- <script type="text/template" id="formResults2">
     <div class="box-main jumbotron col-md-offset-2 col-md-8">
         <div class="col-md-12">
             <div class="result-title">
@@ -597,9 +596,9 @@
                 <p>
                      Based on your information, This is what you would save if you were to add 10 hours of reinforcement per employee with edify&trade; vs your current methods.
                 </p>
-                <!-- <p>
+                <p>
                     Based on the information that you have provided us, this is your projected  return on investment.
-                </p> -->
+                </p>
             </div>
             <ul class="list-group">
             <div class="result-pane col-md-12">
@@ -640,9 +639,9 @@
                 <p>
                      Based on your information, this is how much you would save by doubling your training with edify&trade; vs your current methods.
                 </p>
-                <!-- <p>
+                <p>
                     Based on the information that you have provided us, this is your projected  return on investment.
-                </p> -->
+                </p>
             </div>
             <ul class="list-group">
             <div class="result-pane col-md-12">
@@ -689,7 +688,7 @@
             </div>
         </div>
     </div>
-</script>
+</script> -->
 
 
 

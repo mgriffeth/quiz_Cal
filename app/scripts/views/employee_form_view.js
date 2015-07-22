@@ -23,9 +23,11 @@
 				edifyAnually = employees * edifyAnuallyPerPerson;
 				trainingHoursPerEmployee = 28;
 				trainingHours = trainingHoursPerEmployee * employees;
+				trainingCostPerEmployee = 1208;
+				trainingCost =  trainingCostPerEmployee * employees;
 				console.log(employees);
 				console.log(edifyAnually);
-				App.router.navigate('formPage02', { trigger : true });	
+				App.router.navigate('formPage04', { trigger : true });	
 			}
 		},
 		// checkInput: function(){
