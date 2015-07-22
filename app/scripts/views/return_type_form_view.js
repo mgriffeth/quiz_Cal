@@ -16,13 +16,14 @@
 		next: function(){
 			// App.router.navigate('results1View', { trigger : true });	
 			if (returnType){
-				if (returnType == "Increase Current Training"){
 					App.router.navigate('results1View', { trigger : true });	
-				}else if (returnType == "Add training") {
-					App.router.navigate('results2View', { trigger : true });	
-				}else{
-					App.router.navigate('results3View', { trigger : true });	
-				}
+				// if (returnType == "Increase Current Training"){
+				// 	App.router.navigate('results1View', { trigger : true });	
+				// }else if (returnType == "Add training") {
+				// 	App.router.navigate('results2View', { trigger : true });	
+				// }else{
+				// 	App.router.navigate('results3View', { trigger : true });	
+				// }
 				console.log(returnType);
 				
 			}

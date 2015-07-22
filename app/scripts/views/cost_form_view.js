@@ -18,26 +18,34 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			if($('#industryAvgCost').is(':checked')){
-				trainingCostPerEmployee = 1011.33333;
-				// accounting.formatNumber(1011.33333,2,',');
-				trainingCost = trainingCostPerEmployee * employees;
-				
-				App.router.navigate('formPage03', { trigger : true });
-			} else if($('#trainingCost').val().length > 0){
-				if($('#radioTimeTotal').is(':checked')) {
-					trainingCost = Number($('#trainingCost').val());
-					trainingCostPerEmployee = trainingCost / employees;
-					console.log(trainingCost);
-					console.log(trainingCostPerEmployee);
-				} else if ($('#radioTimePerEmployee').is(':checked')) {
-					trainingCostPerEmployee = Number($('#trainingCost').val());
-					trainingCost =  trainingCostPerEmployee * employees;
-					console.log(trainingCost);
-					console.log(trainingCostPerEmployee);
-				}
-				App.router.navigate('formPage03', { trigger : true });
+			if($('#trainingCost').val().length > 0){
+				trainingCostPerEmployee = Number($('#trainingCost').val());
+				trainingCost =  trainingCostPerEmployee * employees;
+			} else {
+				trainingCostPerEmployee = 1208;
+				trainingCost =  trainingCostPerEmployee * employees;
 			}
+			App.router.navigate('formPage04', { trigger : true });
+			// if($('#industryAvgCost').is(':checked')){
+			// 	trainingCostPerEmployee = 1011.33333;
+			// 	// accounting.formatNumber(1011.33333,2,',');
+			// 	trainingCost = trainingCostPerEmployee * employees;
+			// 	
+			// 	App.router.navigate('formPage03', { trigger : true });
+			// } else if($('#trainingCost').val().length > 0){
+			// 	if($('#radioTimeTotal').is(':checked')) {
+			// 		trainingCost = Number($('#trainingCost').val());
+			// 		trainingCostPerEmployee = trainingCost / employees;
+			// 		console.log(trainingCost);
+			// 		console.log(trainingCostPerEmployee);
+			// 	} else if ($('#radioTimePerEmployee').is(':checked')) {
+			// 		trainingCostPerEmployee = Number($('#trainingCost').val());
+			// 		trainingCost =  trainingCostPerEmployee * employees;
+			// 		console.log(trainingCost);
+			// 		console.log(trainingCostPerEmployee);
+			// 	}
+			// 	App.router.navigate('formPage03', { trigger : true });
+			//}
 		},
 		back: function(){
 			App.router.navigate('formPage01', { trigger : true });

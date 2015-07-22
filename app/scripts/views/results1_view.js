@@ -32,7 +32,7 @@
 			//   $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 80,2,','));
   	// 		$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 80,2,','));
   			
-  			$('#return').html('$' + accounting.formatNumber(returnOnInvestment1 ,2,','));
+  			$('#return').html('$' + accounting.formatNumber(returnOnInvestment1 ,0,','));
 		}, 2000);
 			
 			
