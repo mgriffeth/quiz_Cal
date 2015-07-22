@@ -127,7 +127,8 @@
 (function(){
 	App.Views.FormNumberEmployeesView = Parse.View.extend({
 		events:{
-			'click #nextToTrainingCost' : 'next'
+			'click #nextToTrainingCost' : 'next',
+			// 'change #numberEmployees' : 'checkInput'
 		},
 		
 		template: $('#formNumberEmployees').html(),
@@ -146,11 +147,23 @@
 			if($('#numberEmployees').val().length > 0){
 				employees = Number($('#numberEmployees').val());
 				edifyAnually = employees * edifyAnuallyPerPerson;
+				trainingHoursPerEmployee = 28;
+				trainingHours = trainingHoursPerEmployee * employees;
 				console.log(employees);
 				console.log(edifyAnually);
 				App.router.navigate('formPage02', { trigger : true });	
 			}
-		}
+		},
+		// checkInput: function(){
+		// 	// setInterval(function() { ObserveInputValue($('#numberEmployees').val()); }, 100);
+		// 	// setInterval();
+		// 	if($('#numberEmployees').val().length > 0){
+		// 		$('#nextToTrainingCost').removeClass('disabled');
+		// 	} else {
+		// 		$('#nextToTrainingCost').addClass('disabled');
+		// 	}
+		// 	
+		// }
 	});
 }());
 (function(){
@@ -173,26 +186,34 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-			if($('#industryAvgCost').is(':checked')){
-				trainingCostPerEmployee = 1011.33333;
-				// accounting.formatNumber(1011.33333,2,',');
-				trainingCost = trainingCostPerEmployee * employees;
-				
-				App.router.navigate('formPage03', { trigger : true });
-			} else if($('#trainingCost').val().length > 0){
-				if($('#radioTimeTotal').is(':checked')) {
-					trainingCost = Number($('#trainingCost').val());
-					trainingCostPerEmployee = trainingCost / employees;
-					console.log(trainingCost);
-					console.log(trainingCostPerEmployee);
-				} else if ($('#radioTimePerEmployee').is(':checked')) {
-					trainingCostPerEmployee = Number($('#trainingCost').val());
-					trainingCost =  trainingCostPerEmployee * employees;
-					console.log(trainingCost);
-					console.log(trainingCostPerEmployee);
-				}
-				App.router.navigate('formPage03', { trigger : true });
+			if($('#trainingCost').val().length > 0){
+				trainingCostPerEmployee = Number($('#trainingCost').val());
+				trainingCost =  trainingCostPerEmployee * employees;
+			} else {
+				trainingCostPerEmployee = 1208;
+				trainingCost =  trainingCostPerEmployee * employees;
 			}
+			App.router.navigate('formPage04', { trigger : true });
+			// if($('#industryAvgCost').is(':checked')){
+			// 	trainingCostPerEmployee = 1011.33333;
+			// 	// accounting.formatNumber(1011.33333,2,',');
+			// 	trainingCost = trainingCostPerEmployee * employees;
+			// 	
+			// 	App.router.navigate('formPage03', { trigger : true });
+			// } else if($('#trainingCost').val().length > 0){
+			// 	if($('#radioTimeTotal').is(':checked')) {
+			// 		trainingCost = Number($('#trainingCost').val());
+			// 		trainingCostPerEmployee = trainingCost / employees;
+			// 		console.log(trainingCost);
+			// 		console.log(trainingCostPerEmployee);
+			// 	} else if ($('#radioTimePerEmployee').is(':checked')) {
+			// 		trainingCostPerEmployee = Number($('#trainingCost').val());
+			// 		trainingCost =  trainingCostPerEmployee * employees;
+			// 		console.log(trainingCost);
+			// 		console.log(trainingCostPerEmployee);
+			// 	}
+			// 	App.router.navigate('formPage03', { trigger : true });
+			//}
 		},
 		back: function(){
 			App.router.navigate('formPage01', { trigger : true });
@@ -241,13 +262,14 @@
 		next: function(){
 			// App.router.navigate('results1View', { trigger : true });	
 			if (returnType){
-				if (returnType == "Increase Current Training"){
 					App.router.navigate('results1View', { trigger : true });	
-				}else if (returnType == "Add training") {
-					App.router.navigate('results2View', { trigger : true });	
-				}else{
-					App.router.navigate('results3View', { trigger : true });	
-				}
+				// if (returnType == "Increase Current Training"){
+				// 	App.router.navigate('results1View', { trigger : true });	
+				// }else if (returnType == "Add training") {
+				// 	App.router.navigate('results2View', { trigger : true });	
+				// }else{
+				// 	App.router.navigate('results3View', { trigger : true });	
+				// }
 				console.log(returnType);
 				
 			}
@@ -567,7 +589,7 @@
 
 		},
 		back: function(){
-			App.router.navigate('formPage03', { trigger : true });
+			App.router.navigate('formPage02', { trigger : true });
 		},
 		getObjective: function(e){
 			companyObjective = $(e.currentTarget).attr('value');
@@ -613,7 +635,7 @@
 			//   $('#add-hours-current').html('$' + accounting.formatNumber(trainingCostPerHour * 80,2,','));
   	// 		$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 80,2,','));
   			
-  			$('#return').html('$' + accounting.formatNumber(returnOnInvestment1 ,2,','));
+  			$('#return').html('$' + accounting.formatNumber(returnOnInvestment1 ,0,','));
 		}, 2000);
 			
 			
@@ -635,7 +657,7 @@
 				//addition
 				trainingCostPerHour = (trainingCost / trainingHours);
 				edifyPerHour = (edifyAnually / trainingHours);
-				returnOnInvestment2= (trainingCostPerHour - edifyPerHour) / edifyPerHour;
+				returnOnInvestment2 = (trainingCostPerHour - edifyPerHour) / edifyPerHour;
 				
 				var calculationInformation = new App.Models.CalculationModel({
 					employees: employees,
