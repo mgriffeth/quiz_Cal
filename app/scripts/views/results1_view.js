@@ -50,11 +50,11 @@
 			if($('#email').val().length > 0){
 				email = $('#email').val();
 				//extension
-				returnOnInvestment1 = (trainingCost - edifyAnually) /edifyAnually;
+				// returnOnInvestment1 = (trainingCost - edifyAnually) /edifyAnually;
 				//addition
-				trainingCostPerHour = (trainingCost / trainingHours);
-				edifyPerHour = (edifyAnually / trainingHours);
-				returnOnInvestment2 = (trainingCostPerHour - edifyPerHour) / edifyPerHour;
+				// trainingCostPerHour = (trainingCost / trainingHours);
+				// edifyPerHour = (edifyAnually / trainingHours);
+				// returnOnInvestment2 = (trainingCostPerHour - edifyPerHour) / edifyPerHour;
 				
 				var calculationInformation = new App.Models.CalculationModel({
 					employees: employees,

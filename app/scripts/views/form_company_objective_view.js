@@ -3,7 +3,7 @@
 		events:{
 			'click #nextToIndustry' : 'next',
 			'click #backToTrainingTime' : 'back',
-			'click .objectiveButton' : 'getObjective'
+			'click .objectiveButton' : 'setObjectives'
 		},
 		
 		template: $('#formCompanyObjective').html(),
@@ -17,22 +17,38 @@
 			this.$el.html(this.template);
 		},
 		next: function(){
-		
-			if (companyObjective){
+			companyObjective =[];
+				$('.objectiveButton').each(function(){
+					if($(this).val() == 'selected'){
+						companyObjective.push($(this).text());
+					}
+				})
 				console.log(companyObjective);
-				App.router.navigate('formPage05', { trigger : true });	
-			}
-
+				if(companyObjective.length > 0 ){
+					App.router.navigate('formPage05', { trigger : true });		
+				}
+				
+			
 		},
 		back: function(){
 			App.router.navigate('formPage01', { trigger : true });
 		},
-		getObjective: function(e){
-			companyObjective = $(e.currentTarget).attr('value');
+		setObjectives: function(e){
+			// companyObjective = $(e.currentTarget).attr('value');
 			
-			$('.objectiveButton').removeClass('btn-info')
 			
-			$(e.currentTarget).addClass('btn-info')
+			if ($(e.currentTarget).val() == 'not-selected'){
+				$(e.currentTarget).val('selected')
+				$(e.currentTarget).addClass('btn-info')
+				
+			} else{
+				$(e.currentTarget).val('not-selected')
+				$(e.currentTarget).removeClass('btn-info')
+				
+			}
+			
+			
+			
 			
 		}
 	});

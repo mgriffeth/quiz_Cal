@@ -17,7 +17,7 @@
 			email:'',
 			industry:'',
 			returnType: '',
-			companyObjective:'',
+			companyObjective:[],
 			companyName:'',
 			name:'',
 			returnOnInvestment1:'',
