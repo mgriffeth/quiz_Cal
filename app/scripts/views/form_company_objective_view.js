@@ -2,7 +2,7 @@
 	App.Views.FormCompanyObjectiveView = Parse.View.extend({
 		events:{
 			'click #nextToIndustry' : 'next',
-			'click #backToTrainingTime' : 'back',
+			'click #backToEmployees' : 'back',
 			'click .objectiveButton' : 'setObjectives'
 		},
 		

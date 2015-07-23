@@ -1,8 +1,8 @@
 (function(){
 	App.Views.FormIndustryView = Parse.View.extend({
 		events:{
-			'click #nextToEmail' : 'next',
-			'click #backToReturnType' : 'back',
+			'click #nextToReturnType' : 'next',
+			'click #backToCompanyObjective' : 'back',
 			'click .industryButton' : 'getIndustry'
 		},
 		
