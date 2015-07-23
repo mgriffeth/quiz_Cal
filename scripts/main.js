@@ -289,8 +289,8 @@
 (function(){
 	App.Views.FormIndustryView = Parse.View.extend({
 		events:{
-			'click #nextToEmail' : 'next',
-			'click #backToReturnType' : 'back',
+			'click #nextToReturnType' : 'next',
+			'click #backToCompanyObjective' : 'back',
 			'click .industryButton' : 'getIndustry'
 		},
 		
@@ -568,7 +568,7 @@
 	App.Views.FormCompanyObjectiveView = Parse.View.extend({
 		events:{
 			'click #nextToIndustry' : 'next',
-			'click #backToTrainingTime' : 'back',
+			'click #backToEmployees' : 'back',
 			'click .objectiveButton' : 'setObjectives'
 		},
 		
