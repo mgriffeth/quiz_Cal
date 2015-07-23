@@ -22,7 +22,8 @@
 			name:'',
 			returnOnInvestment1:'',
 			returnOnInvestment2:'',
-			anualSavings:''
+			anualSavings:'',
+			viewedBy:[]
 		},
 		
 		initialize: function (){
