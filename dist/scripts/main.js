@@ -705,6 +705,16 @@
 						App.calculation_collection.add(calculationInformation);
 						console.log(calculationInformation);
 						
+						var body_message = 'Please tell me more about edify  and how it can help my company. Please contact me at ' + email + '.'
+						var emailAddress = 'john@tendoto.com';
+						var subject = 'Tell me about edify';
+						var mailto_link = 'mailto:' + emailAddress + '?subject=' + subject + '&body=' + body_message;
+    
+						window.open(mailto_link, 'emailWindow');
+						
+
+						
+						
 						employees = '';
 						trainingCost = '';
 						trainingCostPerEmployee = '';
@@ -722,6 +732,9 @@
 						returnOnInvestment1 ='';
 						returnOnInvestment2 ='';
 						anualSavings ='';
+						
+						
+						
 						
 						App.router.navigate('', { trigger : true });
 						
