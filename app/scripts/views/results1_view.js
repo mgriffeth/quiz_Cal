@@ -33,6 +33,9 @@
   	// 		$('#add-hours-edify').html('$' + accounting.formatNumber(edifyPerHour * 80,2,','));
   			
   			$('#return').html('$' + accounting.formatNumber(returnOnInvestment1 ,0,','));
+			$('#youEnteredEmployees').html(employees);
+			$('#youEnteredObjectives').html(companyObjective);
+			$('#youEnteredIndustry').html(industry);
 		}, 2000);
 			
 			
