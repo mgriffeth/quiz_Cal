@@ -101,6 +101,9 @@
 						returnOnInvestment2 ='';
 						anualSavings ='';
 						
+						
+						
+						
 						App.router.navigate('', { trigger : true });
 						
 						// if(returnType == 'Extend Current Training' ){
